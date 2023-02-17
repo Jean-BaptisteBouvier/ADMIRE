@@ -6,6 +6,8 @@ This project contains the MATLAB codes for the ADMIRE fighter jet model. This mo
 **File Structure**
 ---
 
+1. The reference report from Lars Forssell and Ulrik Nilsson is the file `ADMIRE FOI report.pdf`.
+2. `Admirer4.1` is the folder containing all the codes described in the report.
 
 
 
@@ -13,7 +15,7 @@ This project contains the MATLAB codes for the ADMIRE fighter jet model. This mo
 **Running**
 ---
 
-Run the code `startup.m`
+Download the folder `Admirer4.1` and run the code `startup.m`.
 
 
 **Citation**
