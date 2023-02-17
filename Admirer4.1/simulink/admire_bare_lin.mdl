@@ -1,0 +1,3457 @@
+Model {
+  Name			  "admire_bare_lin"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  on
+  ShowLineWidths	  on
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "500*0.02"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode4"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "0.02"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  on
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWOptions		  " -aLogVarNameModifier=\"rt_\" -aExtMode=0 -aRollThr"
+"eshold=5 -aShowEliminatedStatements=1 -aRTWVerbose=1 -aInlineInvariantSignals"
+"=1 -aLocalBlockOutputs=1 -aInlineParameters=0"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_adm5p3.tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Thu Aug 26 16:46:49 1999"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lkh"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jun 28 11:32:30 2001"
+  ModifiedComment	  "nnt -- Mon Jun 05 13:08:11 2000 -- Version 3.42\n"
+  ModifiedHistory	  "nnt -- Mon Jun 05 13:08:11 2000 -- Version 3.42\n\n"
+"\nnnt -- Mon Jun 05 11:01:33 2000 -- Version 3.41\n\n\nnnt -- Mon Jun 05 10:5"
+"7:40 2000 -- Version 3.40\n\n\nnnt -- Mon Jun 05 10:56:46 2000 -- Version 3.3"
+"9\n\n\nhkg -- Thu Apr 13 16:38:30 2000 -- Version 3.38\nBug fix: all rate lim"
+"iters were set with the canard parameters, now they get individual settings.."
+"\n\nhkg -- Thu Apr 13 10:24:31 2000 -- Version 3.37\nInserted 3.0 version num"
+"ber in Level 1, changed month to April.\n\nhkg -- Tue Apr 11 10:36:55 2000 --"
+" Version 3.36\ndtz re-connected\n\nhkg -- Tue Apr 11 10:28:52 2000 -- Version"
+" 3.35\nChanged the roll force saturation to +-80 N\n\nhkg -- Tue Apr 11 09:23"
+":02 2000 -- Version 3.34\nAll signal generators on Level 1 are now set to sin"
+"e wave\n\nhkg -- Mon Apr 10 15:03:16 2000 -- Version 3.33\nNew names for the "
+"RL_choice blocks\n\nfosimadmin -- Mon Apr 10 13:44:14 2000 -- Version 3.32\nH"
+"kg actually. Nothing special\n\nhkg -- Fri Apr 07 14:32:16 2000 -- Version 3."
+"31\nA few corrections to the names\n\nhkg -- Fri Apr 07 14:16:55 2000 -- Vers"
+"ion 3.30\nAdded unique names inside Saab and DASA rate limiters for left elev"
+"ons, rudder and\nleading-edge flaps.\nhkg -- Fri Apr 07 14:04:35 2000 -- Vers"
+"ion 3.29\nAdded unique names inside SAAB and DASA rate limiters for canard an"
+"d right outer and\ninner elevons.\nhkg -- Thu Apr 06 17:23:24 2000 -- Version"
+" 3.28\nInserted unique names for rate limiters and multiport switches in the "
+"rate limiter selection blocks.\nhkg -- Thu Apr 06 16:09:22 2000 -- Version 3."
+"27\nDisconnected dtz again. Chosen grt_adm5p3.tmf as template makefile. Code "
+"generation seems to work.\nhyd -- Tue Mar 28 15:20:39 2000 -- Version 3.26\nh"
+"yd -- Tue Mar 28 14:28:32 2000 -- Version 3.25\nhyd -- Tue Mar 28 11:30:24 20"
+"00 -- Version 3.24\nhyd -- Mon Mar 27 15:22:27 2000 -- Version 3.23\nhyd -- M"
+"on Mar 27 13:42:12 2000 -- Version 3.22\nhyd -- Mon Mar 27 10:51:54 2000 -- V"
+"ersion 3.21\nhyd -- Fri Mar 24 13:18:05 2000 -- Version 3.20\nhyd -- Fri Mar "
+"24 12:50:02 2000 -- Version 3.19\nhyd -- Fri Mar 24 11:54:23 2000 -- Version "
+"3.18\nhyd -- Thu Mar 23 15:20:42 2000 -- Version 3.17\nhyd -- Thu Mar 23 15:1"
+"7:54 2000 -- Version 3.16\nhyd -- Wed Mar 22 09:38:49 2000 -- Version 3.15\nh"
+"yd -- Tue Mar 21 14:06:08 2000 -- Version 3.14\nhyd -- Mon Mar 20 14:42:54 20"
+"00 -- Version 3.13\nhyd -- Wed Mar 15 13:37:48 2000 -- Version 3.12\nhyd -- W"
+"ed Mar 15 12:35:54 2000 -- Version 3.11\njnr -- Tue Mar 14 16:36:26 2000 -- V"
+"ersion 3.10\njnr -- Tue Mar 14 14:13:39 2000 -- Version 3.9\njnr -- Tue Mar 1"
+"4 14:13:23 2000 -- Version 3.8\njnr -- Tue Mar 14 10:09:15 2000 -- Version 3."
+"7\njnr -- Tue Mar 14 09:37:34 2000 -- Version 3.6\njnr -- Tue Mar 14 09:30:20"
+" 2000 -- Version 3.5\nAdd:\n*proper stick gradients.\n*correct gains for nz-c"
+"ontrol according to Åke Hydén.\n*what transition region between q-control and"
+" nz-control is proper??\nfll -- Fri Mar 03 09:53:48 2000 -- Version 3.4\nchan"
+"ged name of \"dtx\" to \"dty\" (horizontal nozzle deflection)\nfll -- Thu Mar"
+" 02 12:51:23 2000 -- Version 3.3\nReducesed the number of integrators to one "
+"in the longitudinal controller.\nfll -- Thu Mar 02 12:30:52 2000 -- Version 3"
+".2\nMoved the blending function in the Nz and q controller.\nfll -- Thu Mar 0"
+"2 10:50:25 2000 -- Version 3.1\nChanged input blocks to \"Signal generator\""
+"\nfll -- Thu Mar 02 10:50:25 2000 -- Version 3.0\nVersion 3.0 is modified acc"
+"ording to comments from users"
+  ModelVersionFormat	  "3.%<AutoIncrement:332>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "admire_bare_lin"
+    Location		    [90, 78, 968, 675]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    212
+    ScreenColor		    "yellow"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    off
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Inport
+      Name		      "drc_dist"
+      Position		      [75, 23, 105, 37]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "1"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dlc_dist"
+      Position		      [175, 58, 205, 72]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "2"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "droe_dist"
+      Position		      [75, 93, 105, 107]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "3"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "drie_dist"
+      Position		      [175, 128, 205, 142]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "4"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dlie_dist"
+      Position		      [75, 163, 105, 177]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "5"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dloe_dist"
+      Position		      [175, 198, 205, 212]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "6"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dr_dist"
+      Position		      [75, 233, 105, 247]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "7"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dle_dist"
+      Position		      [175, 268, 205, 282]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "8"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "ldg_dist"
+      Position		      [75, 303, 105, 317]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "9"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "tss_dist"
+      Position		      [175, 338, 205, 352]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "10"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dty_dist"
+      Position		      [75, 373, 105, 387]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "11"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dtz_dist"
+      Position		      [175, 408, 205, 422]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "12"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_dist"
+      Position		      [75, 443, 105, 457]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "13"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "v_dist"
+      Position		      [175, 478, 205, 492]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "14"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "w_dist"
+      Position		      [75, 513, 105, 527]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "15"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "p_dist"
+      Position		      [175, 548, 205, 562]
+      BackgroundColor	      "lightBlue"
+      NamePlacement	      "alternate"
+      FontAngle		      "italic"
+      Port		      "16"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      "S-Function"
+      Name		      "ADMIRE_main"
+      Ports		      [3, 1, 0, 0, 0]
+      Position		      [370, 291, 475, 379]
+      DropShadow	      on
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      FunctionName	      "admire_main"
+      Parameters	      "x0bare dx0bare"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+      MaskType		      "ADMIRE C-code block"
+      MaskDescription	      "Main block describing the ADMIRE.\nTo use HELP,"
+" start any Internet browser."
+      MaskHelp		      "The aircraft it self is a C-code file that calc"
+"ulates the dynamics of the structure and the air surrounding it.<br>\nThe sim"
+"ulation requires an initial vector of values called x0 containing the followi"
+"ng variables.<br><br>\n\nVt_init     --     initial airspeed.                "
+"        [m/s]<br>\nalpha_init --    initial angle of attack.             [rad"
+"]<br>\nbeta_init    --   initial angle of sideslip.            [rad]<br>\npb_"
+"init     --     initial roll angular rate.             [rad/s]<br>\nqb_init  "
+"   --     initial pitch angular rate.          [rad/s]<br>\nrb_init       -- "
+"   initial yaw angular rate.           [rad/s]<br>\npsi_init      --    initi"
+"al euler angles (azimuth)    [rad]<br>\ntheta_init   --   initial (elevation)"
+"                      [rad]<br>\nphi_init      --   initial (bank)           "
+"                  [rad]<br>\nxv_init      --    initial x position in Fv     "
+"           [m]<br>\nyv_init        --  initial y                             "
+"        [m]<br>\nzv_init       --   initial z                                "
+"     [m]<br>"
+      MaskDisplay	      "plot([18 12 3 2 2 8 11],[7 4 1 1 2 8 11])\nplot"
+"([13 11 13 15 15 13],[12 11 16 17 13 12])\nplot([15 17 20 23 30 17],[13 14 24"
+" 25 20 14])\nplot([30 38 40 38 30],[19 31 32 22 19])\nplot([38.5 41 36 22 41 "
+"43 36],[23 21 16 10 8 10 16])\nplot([15 19 25 24 15],[7 9 9 8 7])\nplot([8 11"
+" 13 14 9 8],[8 11 12 10 7 8])\nplot([21 23],[9 10])\nplot([30 31],[20 20.5])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ConfigParam"
+      Ports		      [0, 1, 0, 0, 0]
+      Position		      [300, 328, 335, 342]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      ShowPortLabels	      on
+      System {
+	Name			"ConfigParam"
+	Location		[388, 267, 724, 574]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ix "
+	  Position		  [80, 155, 130, 175]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "21000"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ixz "
+	  Position		  [25, 245, 70, 265]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "2500"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Iy "
+	  Position		  [25, 185, 90, 205]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "81000"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Iz "
+	  Position		  [80, 215, 140, 235]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "101000"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [8, 1, 0, 0, 0]
+	  Position		  [195, 25, 210, 275]
+	  BackgroundColor	  "black"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Inputs		  "8"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "mass "
+	  Position		  [80, 35, 120, 55]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "9100"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "xcg "
+	  Position		  [20, 65, 75, 85]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "0*5.20"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "ycg "
+	  Position		  [80, 95, 100, 115]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "zcg "
+	  Position		  [25, 125, 70, 145]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "-0.15"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "CP"
+	  Position		  [250, 143, 280, 157]
+	  BackgroundColor	  "orange"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "mass "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "xcg "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "ycg "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "zcg "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Ix "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Iy "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Iz "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Ixz "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "CP"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [32, 17]
+	  BackgroundColor	  "green"
+	  Text			  "Level II"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 3, 0, 0, 0]
+      Position		      [520, 275, 525, 395]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontAngle		      "italic"
+      Outputs		      "[12 10 9]"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      Ports		      [1, 10, 0, 0, 0]
+      Position		      [610, 237, 615, 433]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontAngle		      "italic"
+      Outputs		      "10"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux2"
+      Ports		      [1, 12, 0, 0, 0]
+      Position		      [745, 92, 750, 328]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontAngle		      "italic"
+      Outputs		      "12"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux3"
+      Ports		      [1, 9, 0, 0, 0]
+      Position		      [745, 368, 750, 552]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontAngle		      "italic"
+      Outputs		      "9"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [16, 1, 0, 0, 0]
+      Position		      [265, 32, 270, 573]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontAngle		      "italic"
+      Inputs		      "16"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sensor models"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [600, 507, 655, 543]
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Sensors')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Sensor models"
+	Location		[77, 74, 1001, 711]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "admire_out"
+	  Position		  [30, 553, 60, 567]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Alpha sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [425, 83, 480, 117]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[1]"
+	  D			  "[0.02  1]"
+	  X0			  "x0(23)"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Altitude sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [450, 453, 505, 487]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[1]"
+	  D			  "[0.02  1]"
+	  X0			  "x0(35)"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Beta sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [645, 133, 700, 167]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[1]"
+	  D			  "[0.02  1]"
+	  X0			  "x0(24)"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 28, 0, 0, 0]
+	  Position		  [85, 47, 90, 1068]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Outputs		  "28"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [28, 1, 0, 0, 0]
+	  Position		  [795, 15, 800, 1060]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Inputs		  "28"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Nz sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [260, 696, 405, 734]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.0001903 0.005346 1]"
+	  D			  "[0.0004942 0.03082 1]"
+	  X0			  "[x0(36) x0(37)]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Pb sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [265, 151, 410, 189]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.0001903 0.005346 1]"
+	  D			  "[0.0004942 0.03082 1]"
+	  X0			  "[x0(25) x0(26)]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Phi sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [265, 346, 410, 384]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[1]"
+	  D			  "[0.00104 0.0323 1]"
+	  X0			  "[x0(33) x0(34)]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Qb sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [450, 206, 595, 244]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.0001903 0.005346 1]"
+	  D			  "[0.0004942 0.03082 1]"
+	  X0			  "[x0(27) x0(28)]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Rb sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [260, 241, 405, 279]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.0001903 0.005346 1]"
+	  D			  "[0.0004942 0.03082 1]"
+	  X0			  "[x0(29) x0(30)]"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Subsystem\nTo Gain-Scheduling"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [675, 747, 750, 778]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  System {
+	    Name		    "Subsystem\nTo Gain-Scheduling"
+	    Location		    [406, 266, 765, 452]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Vt [m/s]"
+	      Position		      [90, 83, 120, 97]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "alt [m]"
+	      Position		      [90, 108, 120, 122]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "2"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [155, 75, 225, 130]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      FunctionName	      "machno"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Mach"
+	      Position		      [255, 98, 285, 112]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Vt [m/s]"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      1
+	      DstBlock		      "Mach"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "alt [m]"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      Position		      [42, 22]
+	      BackgroundColor	      "green"
+	      Text		      "Level III"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [590, 143, 615, 167]
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [355, 88, 380, 112]
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum6"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [385, 458, 410, 482]
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum7"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [590, 53, 615, 77]
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  IconShape		  "rectangular"
+	  Inputs		  "++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [195, 775, 215, 795]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Theta sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [445, 311, 590, 349]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[1]"
+	  D			  "[0.00104 0.0323 1]"
+	  X0			  "[x0(31) x0(32)]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Vt sensor\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [635, 48, 690, 82]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[1]"
+	  D			  "[0.02  1]"
+	  X0			  "x0(22)"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "altitude2z"
+	  Position		  [700, 438, 735, 462]
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Gain			  "-1"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dVt_err"
+	  Position		  [500, 62, 545, 78]
+	  NamePlacement		  "alternate"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dVt_err"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dalpha_err"
+	  Position		  [255, 97, 320, 113]
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dalpha_err"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dalt_err"
+	  Position		  [310, 487, 360, 503]
+	  NamePlacement		  "alternate"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dalt_err"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dbeta_err"
+	  Position		  [490, 152, 550, 168]
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dbeta_err"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "z2altitude"
+	  Position		  [235, 458, 270, 482]
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Gain			  "-1"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "admire_sensed_out"
+	  Position		  [850, 533, 880, 547]
+	  BackgroundColor	  "orange"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  24
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  24
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  25
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  25
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  26
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  26
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  27
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  27
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  28
+	  Points		  [0, -30; 685, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  28
+	}
+	Line {
+	  SrcBlock		  "admire_out"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Qb sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [180, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  11
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  11
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  13
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  13
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  14
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  14
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "Qb sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  Points		  [0, -20]
+	  DstBlock		  "Pb sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pb sensor\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Alpha sensor\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  DstBlock		  "Rb sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rb sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [370, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  8
+	  DstBlock		  "Theta sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Theta sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [185, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  15
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  15
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  16
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  16
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  17
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  17
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  18
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  18
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  20
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  20
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  22
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  22
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  23
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  23
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  21
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dalpha_err"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [245, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "Alpha sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dbeta_err"
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [475, 0; 0, -5]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "admire_sensed_out"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum7"
+	  SrcPort		  1
+	  DstBlock		  "Vt sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dVt_err"
+	  SrcPort		  1
+	  DstBlock		  "Sum7"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  Points		  [475, 0; 0, -25]
+	  DstBlock		  "Sum7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Vt sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [1, 0]
+	    Points		    [0, 240; -50, 0]
+	    DstBlock		    "Subsystem\nTo Gain-Scheduling"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  9
+	  DstBlock		  "Phi sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Phi sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [365, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  7
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "dalt_err"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "Sum6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum6"
+	  SrcPort		  1
+	  DstBlock		  "Altitude sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  12
+	  DstBlock		  "z2altitude"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "z2altitude"
+	  SrcPort		  1
+	  Points		  [95, 0]
+	  DstBlock		  "Sum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Nz sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [370, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  19
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Beta sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Beta sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [75, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  10
+	  Points		  [0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  19
+	  DstBlock		  "Nz sensor\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "altitude2z"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  12
+	}
+	Line {
+	  SrcBlock		  "Altitude sensor\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  Branch {
+	    Points		    [0, 300]
+	    DstBlock		    "Subsystem\nTo Gain-Scheduling"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [110, 0]
+	    DstBlock		    "altitude2z"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Subsystem\nTo Gain-Scheduling"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  21
+	}
+	Annotation {
+	  Position		  [162, 79]
+	  BackgroundColor	  "yellow"
+	  Text			  "Aircraft Velocity [m/s]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [162, 114]
+	  BackgroundColor	  "yellow"
+	  Text			  "Angle Of Attack [rad]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [157, 149]
+	  BackgroundColor	  "yellow"
+	  Text			  "Sideslip Angle [rad]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [147, 184]
+	  BackgroundColor	  "yellow"
+	  Text			  " Roll Rate [rad/s]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [152, 219]
+	  BackgroundColor	  "yellow"
+	  Text			  "Pitch Rate [rad/s]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [147, 254]
+	  BackgroundColor	  "yellow"
+	  Text			  "Yaw Rate [rad/s]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [147, 289]
+	  BackgroundColor	  "yellow"
+	  Text			  "Yaw Angle [rad]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [147, 324]
+	  BackgroundColor	  "yellow"
+	  Text			  "Pitch Angle [rad]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [157, 359]
+	  BackgroundColor	  "yellow"
+	  Text			  "Roll Angle [rad]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [152, 394]
+	  BackgroundColor	  "yellow"
+	  Text			  "X Position [m]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [152, 429]
+	  BackgroundColor	  "yellow"
+	  Text			  "Y Position [m]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [152, 464]
+	  BackgroundColor	  "yellow"
+	  Text			  "Z Position [m]"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [157, 499]
+	  BackgroundColor	  "yellow"
+	  Text			  "X Velocity [m/s]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [157, 534]
+	  BackgroundColor	  "yellow"
+	  Text			  "Y Velocity [m/s]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [152, 569]
+	  BackgroundColor	  "yellow"
+	  Text			  "Z Velocity [m/s]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [156, 675]
+	  BackgroundColor	  "yellow"
+	  Text			  "ZV Velocity [m/s]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [156, 640]
+	  BackgroundColor	  "yellow"
+	  Text			  "YV Velocity [m/s]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [156, 605]
+	  BackgroundColor	  "yellow"
+	  Text			  "XV Velocity [m/s]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [157, 709]
+	  BackgroundColor	  "yellow"
+	  Text			  "Z Load Factor [..]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [147, 744]
+	  BackgroundColor	  "yellow"
+	  Text			  "Y Load Factor"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [142, 779]
+	  BackgroundColor	  "yellow"
+	  Text			  "Mach No. [..]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [162, 814]
+	  BackgroundColor	  "yellow"
+	  Text			  "Rate Of Climb [rad]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [157, 849]
+	  BackgroundColor	  "yellow"
+	  Text			  "Drag coefficient [-]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [152, 884]
+	  BackgroundColor	  "yellow"
+	  Text			  "Lift coefficient [-]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [167, 919]
+	  BackgroundColor	  "yellow"
+	  Text			  "Sideforce coefficient [-]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [177, 954]
+	  BackgroundColor	  "yellow"
+	  Text			  "Roll moment coefficient [-]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [177, 989]
+	  BackgroundColor	  "yellow"
+	  Text			  "Pitch moment coefficient [-]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [177, 1009]
+	  BackgroundColor	  "yellow"
+	  Text			  "Yaw moment coefficient [-]"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [42, 37]
+	  BackgroundColor	  "green"
+	  Text			  "Level III"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum10"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 233, 145, 262]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum11"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 513, 145, 542]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum12"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 338, 245, 367]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum13"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 303, 145, 332]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum14"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 408, 245, 437]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum15"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 373, 145, 402]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum16"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 478, 245, 507]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum17"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 443, 145, 472]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum18"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 548, 245, 577]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 58, 245, 87]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum4"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 23, 145, 52]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum5"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 128, 245, 157]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum6"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 93, 145, 122]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum7"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 198, 245, 227]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum8"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [135, 163, 145, 192]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum9"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [235, 268, 245, 297]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Selector
+      Name		      "Temp"
+      Position		      [515, 507, 570, 543]
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Elements		      "[1:28]"
+      InputPortWidth	      "31"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "UncertainParam"
+      Ports		      [0, 1, 0, 0, 0]
+      Position		      [300, 358, 335, 372]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      ShowPortLabels	      on
+      MaskDisplay	      "plot([0 10 5 0],[0 0 8.6603 0])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"UncertainParam"
+	Location		[416, 74, 784, 756]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [25, 1, 0, 0, 0]
+	  Position		  [240, 13, 250, 687]
+	  BackgroundColor	  "black"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Inputs		  "25"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCl_beta "
+	  Position		  [20, 241, 100, 259]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCl_beta"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCl_dai "
+	  Position		  [20, 342, 100, 358]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCl_dai"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCl_day"
+	  Position		  [120, 317, 200, 333]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCl_day"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCl_dr "
+	  Position		  [120, 367, 200, 383]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCl_dr"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCl_p "
+	  Position		  [120, 267, 200, 283]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCl_p"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCl_r "
+	  Position		  [20, 292, 100, 308]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCl_r"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCm_alpha "
+	  Position		  [20, 392, 100, 408]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCm_alpha"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCm_dei "
+	  Position		  [20, 492, 100, 508]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCm_dei"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCm_dey "
+	  Position		  [120, 467, 200, 483]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCm_dey"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCm_dne "
+	  Position		  [20, 442, 100, 458]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCm_dne"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCm_q "
+	  Position		  [120, 417, 200, 433]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCm_q"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCn_beta "
+	  Position		  [20, 542, 100, 558]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCn_beta"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCn_dna"
+	  Position		  [120, 617, 200, 633]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCn_dna"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCn_dr "
+	  Position		  [20, 642, 100, 658]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCn_dr"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCn_p "
+	  Position		  [120, 567, 200, 583]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCn_p"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCn_r "
+	  Position		  [20, 592, 100, 608]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCn_r"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dCn_zero"
+	  Position		  [120, 517, 200, 533]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dCn_zero"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dIxx"
+	  Position		  [20, 141, 100, 159]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dIxx"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dIxz"
+	  Position		  [120, 217, 200, 233]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dIxz"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dIyy "
+	  Position		  [120, 167, 200, 183]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dIyy"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dIzz "
+	  Position		  [20, 191, 100, 209]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dIzz"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dmass "
+	  Position		  [20, 41, 100, 59]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dmass"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dxcg"
+	  Position		  [120, 67, 200, 83]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dxcg"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dycg "
+	  Position		  [20, 91, 100, 109]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dycg"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "dzcg "
+	  Position		  [120, 117, 200, 133]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "dzcg"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "UP"
+	  Position		  [295, 343, 325, 357]
+	  BackgroundColor	  "orange"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "dCn_dna"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  24
+	}
+	Line {
+	  SrcBlock		  "dmass "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dycg "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "dxcg"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "dzcg "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "dIxx"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "dIyy "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "dIzz "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "dIxz"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "dCl_beta "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "dCl_p "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "dCl_r "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  11
+	}
+	Line {
+	  SrcBlock		  "dCl_day"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  12
+	}
+	Line {
+	  SrcBlock		  "dCl_dai "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  13
+	}
+	Line {
+	  SrcBlock		  "dCl_dr "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  14
+	}
+	Line {
+	  SrcBlock		  "dCm_alpha "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  15
+	}
+	Line {
+	  SrcBlock		  "dCm_q "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  16
+	}
+	Line {
+	  SrcBlock		  "dCm_dey "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  18
+	}
+	Line {
+	  SrcBlock		  "dCn_zero"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  20
+	}
+	Line {
+	  SrcBlock		  "dCn_p "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  22
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "UP"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dCm_dne "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  17
+	}
+	Line {
+	  SrcBlock		  "dCm_dei "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  19
+	}
+	Line {
+	  SrcBlock		  "dCn_beta "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  21
+	}
+	Line {
+	  SrcBlock		  "dCn_dr "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  25
+	}
+	Line {
+	  SrcBlock		  "dCn_r "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  23
+	}
+	Annotation {
+	  Position		  [37, 17]
+	  BackgroundColor	  "green"
+	  Text			  "Level II"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dlc_in"
+      Position		      [115, 73, 175, 87]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(2)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dle_in"
+      Position		      [115, 283, 175, 297]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(8)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dlie_in"
+      Position		      [15, 178, 75, 192]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(5)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dloe_in"
+      Position		      [115, 213, 175, 227]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(6)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dr_in"
+      Position		      [15, 248, 75, 262]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(7)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "drc_in"
+      Position		      [15, 38, 75, 52]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(1)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "drie_in"
+      Position		      [115, 143, 175, 157]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(4)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "droe_in"
+      Position		      [15, 108, 75, 122]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(3)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dty_in"
+      Position		      [15, 388, 75, 402]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(11)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dtz_in"
+      Position		      [115, 423, 175, 437]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(12)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "ldg_in"
+      Position		      [15, 318, 75, 332]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(9)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "p_dist_in"
+      Position		      [115, 563, 175, 577]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(16)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "tss_in"
+      Position		      [115, 353, 175, 367]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(10)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "u_dist_in"
+      Position		      [15, 458, 75, 472]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(13)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "v_dist_in"
+      Position		      [115, 493, 175, 507]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(14)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "w_dist_in"
+      Position		      [15, 528, 75, 542]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0new(15)"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Vt_out"
+      Position		      [825, 93, 855, 107]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "alpha_out"
+      Position		      [775, 113, 805, 127]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "2"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "beta_out"
+      Position		      [825, 133, 855, 147]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "3"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "pb_out"
+      Position		      [775, 153, 805, 167]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "4"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "qb_out"
+      Position		      [825, 173, 855, 187]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "5"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "rb_out"
+      Position		      [775, 193, 805, 207]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "6"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "psi_out"
+      Position		      [825, 213, 855, 227]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "7"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "theta_out"
+      Position		      [775, 233, 805, 247]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "8"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "phi_out"
+      Position		      [825, 253, 855, 267]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "9"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "x_out"
+      Position		      [775, 273, 805, 287]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "10"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "y_out"
+      Position		      [825, 293, 855, 307]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "11"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "z_out"
+      Position		      [775, 313, 805, 327]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "12"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "ub_out"
+      Position		      [695, 238, 725, 252]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "13"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "vb_out"
+      Position		      [635, 258, 665, 272]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "14"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "wb_out"
+      Position		      [695, 278, 725, 292]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "15"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "uv_out"
+      Position		      [635, 298, 665, 312]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "16"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "vv_out"
+      Position		      [695, 318, 725, 332]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "17"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "wv_out"
+      Position		      [635, 338, 665, 352]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "18"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "nz_out"
+      Position		      [695, 358, 725, 372]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "19"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "ny_out"
+      Position		      [635, 378, 665, 392]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "20"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "mach_out"
+      Position		      [695, 398, 725, 412]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "21"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "gamma_out"
+      Position		      [635, 418, 665, 432]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "22"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "CD_out"
+      Position		      [830, 373, 860, 387]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "23"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "CL_out"
+      Position		      [780, 393, 810, 407]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "24"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "CC_out"
+      Position		      [830, 413, 860, 427]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "25"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Cl_out"
+      Position		      [780, 433, 810, 447]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "26"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Cm_out"
+      Position		      [830, 453, 860, 467]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "27"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Cn_out"
+      Position		      [780, 473, 810, 487]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "28"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Fx_out"
+      Position		      [830, 493, 860, 507]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "29"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Fz_out"
+      Position		      [780, 513, 810, 527]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "30"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "My_out"
+      Position		      [830, 533, 860, 547]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "31"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Y_measured"
+      Position		      [690, 518, 720, 532]
+      BackgroundColor	      "orange"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Port		      "32"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "ConfigParam"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_main"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "UncertainParam"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_main"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_main"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      DstBlock		      "Demux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [35, 0; 0, -85]
+      DstBlock		      "Demux2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [35, 0; 0, 85]
+      DstBlock		      "Demux3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      2
+      DstBlock		      "alpha_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      4
+      DstBlock		      "pb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      6
+      DstBlock		      "rb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      8
+      DstBlock		      "theta_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      10
+      DstBlock		      "x_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      12
+      DstBlock		      "z_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      1
+      DstBlock		      "Vt_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      3
+      DstBlock		      "beta_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      5
+      DstBlock		      "qb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      7
+      DstBlock		      "psi_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      9
+      DstBlock		      "phi_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux2"
+      SrcPort		      11
+      DstBlock		      "y_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      DstBlock		      "vb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      4
+      DstBlock		      "uv_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      6
+      DstBlock		      "wv_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      8
+      DstBlock		      "ny_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      10
+      DstBlock		      "gamma_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      DstBlock		      "ub_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      DstBlock		      "wb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      5
+      DstBlock		      "vv_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      7
+      DstBlock		      "nz_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      9
+      DstBlock		      "mach_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      2
+      DstBlock		      "CL_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      4
+      DstBlock		      "Cl_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      6
+      DstBlock		      "Cn_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      8
+      DstBlock		      "Fz_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      1
+      DstBlock		      "CD_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      3
+      DstBlock		      "CC_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      5
+      DstBlock		      "Cm_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      7
+      DstBlock		      "Fx_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux3"
+      SrcPort		      9
+      DstBlock		      "My_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sensor models"
+      SrcPort		      1
+      DstBlock		      "Y_measured"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Temp"
+      SrcPort		      1
+      DstBlock		      "Sensor models"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ADMIRE_main"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Demux"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 190]
+	DstBlock		"Temp"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "drc_dist"
+      SrcPort		      1
+      DstBlock		      "Sum4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "drc_in"
+      SrcPort		      1
+      DstBlock		      "Sum4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum4"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dlc_dist"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dlc_in"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "droe_dist"
+      SrcPort		      1
+      DstBlock		      "Sum6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "droe_in"
+      SrcPort		      1
+      DstBlock		      "Sum6"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum6"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "drie_dist"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "drie_in"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum7"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "dlie_dist"
+      SrcPort		      1
+      DstBlock		      "Sum8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dlie_in"
+      SrcPort		      1
+      DstBlock		      "Sum8"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum8"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "dloe_dist"
+      SrcPort		      1
+      DstBlock		      "Sum7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dloe_in"
+      SrcPort		      1
+      DstBlock		      "Sum7"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum9"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "dr_dist"
+      SrcPort		      1
+      DstBlock		      "Sum10"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dr_in"
+      SrcPort		      1
+      DstBlock		      "Sum10"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum10"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "dle_dist"
+      SrcPort		      1
+      DstBlock		      "Sum9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dle_in"
+      SrcPort		      1
+      DstBlock		      "Sum9"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum12"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "ldg_dist"
+      SrcPort		      1
+      DstBlock		      "Sum13"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ldg_in"
+      SrcPort		      1
+      DstBlock		      "Sum13"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum13"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "tss_dist"
+      SrcPort		      1
+      DstBlock		      "Sum12"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "tss_in"
+      SrcPort		      1
+      DstBlock		      "Sum12"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum14"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      12
+    }
+    Line {
+      SrcBlock		      "dty_dist"
+      SrcPort		      1
+      DstBlock		      "Sum15"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dty_in"
+      SrcPort		      1
+      DstBlock		      "Sum15"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum15"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      11
+    }
+    Line {
+      SrcBlock		      "dtz_dist"
+      SrcPort		      1
+      DstBlock		      "Sum14"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dtz_in"
+      SrcPort		      1
+      DstBlock		      "Sum14"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum16"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      14
+    }
+    Line {
+      SrcBlock		      "u_dist"
+      SrcPort		      1
+      DstBlock		      "Sum17"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "u_dist_in"
+      SrcPort		      1
+      DstBlock		      "Sum17"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum17"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      13
+    }
+    Line {
+      SrcBlock		      "v_dist"
+      SrcPort		      1
+      DstBlock		      "Sum16"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "v_dist_in"
+      SrcPort		      1
+      DstBlock		      "Sum16"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum18"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      16
+    }
+    Line {
+      SrcBlock		      "w_dist"
+      SrcPort		      1
+      DstBlock		      "Sum11"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "w_dist_in"
+      SrcPort		      1
+      DstBlock		      "Sum11"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum11"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      15
+    }
+    Line {
+      SrcBlock		      "p_dist"
+      SrcPort		      1
+      DstBlock		      "Sum18"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "p_dist_in"
+      SrcPort		      1
+      DstBlock		      "Sum18"
+      DstPort		      2
+    }
+    Annotation {
+      Position		      [660, 203]
+      BackgroundColor	      "yellow"
+      Text		      "Original State Vector"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+    }
+    Annotation {
+      Position		      [564, 323]
+      BackgroundColor	      "yellow"
+      Text		      "Velocities &\nLoad Factors"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+    }
+    Annotation {
+      Position		      [661, 475]
+      BackgroundColor	      "yellow"
+      Text		      "Aero Coeffs &\nForces/Moments"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+    }
+    Annotation {
+      Position		      [517, 80]
+      BackgroundColor	      "green"
+      Text		      "admire_bare_lin 3.4f\nModel used for linearisat"
+"ion of ADMIRE BARE 3.4f\nDesigned by Torbjorn Noren & Gunnar Hovmark\nFOI , S"
+"weden , February 2001"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      14
+      FontWeight	      "bold"
+      FontAngle		      "italic"
+    }
+  }
+}

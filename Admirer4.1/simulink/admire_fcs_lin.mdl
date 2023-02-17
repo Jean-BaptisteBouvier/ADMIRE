@@ -1,0 +1,6831 @@
+Model {
+  Name			  "admire_fcs_lin"
+  Version		  3.00
+  SimParamPage		  "WorkspaceI/O"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  on
+  ShowLineWidths	  on
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "60"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode4"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "0.008"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout_split"
+  SaveState		  on
+  StateSaveName		  "xout_split"
+  SaveOutput		  on
+  OutputSaveName	  "yout_split"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWOptions		  " -aLogVarNameModifier=\"rt_\" -aExtMode=0 -aRollThr"
+"eshold=5 -aShowEliminatedStatements=1 -aRTWVerbose=1 -aInlineInvariantSignals"
+"=1 -aLocalBlockOutputs=1 -aInlineParameters=0"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_adm5p3.tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Thu Aug 26 16:46:49 1999"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lkh"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jun 28 11:20:23 2001"
+  ModifiedComment	  "nnt -- Mon Jun 05 13:08:11 2000 -- Version 3.42\n"
+  ModifiedHistory	  "hkg-- Wed Apr 18 2001: Bug fix: dMach_err and dalt_"
+"err are now added to Mach and Alt \nhkg-- Fri Apr 06 2001: Released with Admi"
+"re version 3.4d\nnnt -- Mon Jun 05 13:08:11 2000 -- Version 3.42\nnnt -- Mon "
+"Jun 05 11:01:33 2000 -- Version 3.41\nnnt -- Mon Jun 05 10:57:40 2000 -- Vers"
+"ion 3.40\nnnt -- Mon Jun 05 10:56:46 2000 -- Version 3.39\nhkg -- Thu Apr 13 "
+"16:38:30 2000 -- Version 3.38\nBug fix: all rate limiters were set with the c"
+"anard parameters, now they get individual settings..\nhkg -- Thu Apr 13 10:24"
+":31 2000 -- Version 3.37\nInserted 3.0 version number in Level 1, changed mon"
+"th to April.\nhkg -- Tue Apr 11 10:36:55 2000 -- Version 3.36\ndtz re-connect"
+"ed\nhkg -- Tue Apr 11 10:28:52 2000 -- Version 3.35\nChanged the roll force s"
+"aturation to +-80 N\nhkg -- Tue Apr 11 09:23:02 2000 -- Version 3.34\nAll sig"
+"nal generators on Level 1 are now set to sine wave\nhkg -- Mon Apr 10 15:03:1"
+"6 2000 -- Version 3.33\nNew names for the RL_choice blocks\nfosimadmin -- Mon"
+" Apr 10 13:44:14 2000 -- Version 3.32\nHkg actually. Nothing special\nhkg -- "
+"Fri Apr 07 14:32:16 2000 -- Version 3.31\nA few corrections to the names\nhkg"
+" -- Fri Apr 07 14:16:55 2000 -- Version 3.30\nAdded unique names inside Saab "
+"and DASA rate limiters for left elevons, rudder and\nleading-edge flaps.\nhkg"
+" -- Fri Apr 07 14:04:35 2000 -- Version 3.29\nAdded unique names inside SAAB "
+"and DASA rate limiters for canard and right outer and\ninner elevons.\nhkg --"
+" Thu Apr 06 17:23:24 2000 -- Version 3.28\nInserted unique names for rate lim"
+"iters and multiport switches in the rate limiter selection blocks.\nhkg -- Th"
+"u Apr 06 16:09:22 2000 -- Version 3.27\nDisconnected dtz again. Chosen grt_ad"
+"m5p3.tmf as template makefile. Code generation seems to work.\nhyd -- Tue Mar"
+" 28 15:20:39 2000 -- Version 3.26\nhyd -- Tue Mar 28 14:28:32 2000 -- Version"
+" 3.25\nhyd -- Tue Mar 28 11:30:24 2000 -- Version 3.24\nhyd -- Mon Mar 27 15:"
+"22:27 2000 -- Version 3.23\nhyd -- Mon Mar 27 13:42:12 2000 -- Version 3.22\n"
+"hyd -- Mon Mar 27 10:51:54 2000 -- Version 3.21\nhyd -- Fri Mar 24 13:18:05 2"
+"000 -- Version 3.20\nhyd -- Fri Mar 24 12:50:02 2000 -- Version 3.19\nhyd -- "
+"Fri Mar 24 11:54:23 2000 -- Version 3.18\nhyd -- Thu Mar 23 15:20:42 2000 -- "
+"Version 3.17\nhyd -- Thu Mar 23 15:17:54 2000 -- Version 3.16\nhyd -- Wed Mar"
+" 22 09:38:49 2000 -- Version 3.15\nhyd -- Tue Mar 21 14:06:08 2000 -- Version"
+" 3.14\nhyd -- Mon Mar 20 14:42:54 2000 -- Version 3.13\nhyd -- Wed Mar 15 13:"
+"37:48 2000 -- Version 3.12\nhyd -- Wed Mar 15 12:35:54 2000 -- Version 3.11\n"
+"jnr -- Tue Mar 14 16:36:26 2000 -- Version 3.10\njnr -- Tue Mar 14 14:13:39 2"
+"000 -- Version 3.9\njnr -- Tue Mar 14 14:13:23 2000 -- Version 3.8\njnr -- Tu"
+"e Mar 14 10:09:15 2000 -- Version 3.7\njnr -- Tue Mar 14 09:37:34 2000 -- Ver"
+"sion 3.6\njnr -- Tue Mar 14 09:30:20 2000 -- Version 3.5\nAdd:\n*proper stick"
+" gradients.\n*correct gains for nz-control according to Åke Hydén.\n*what tra"
+"nsition region between q-control and nz-control is proper??\nfll -- Fri Mar 0"
+"3 09:53:48 2000 -- Version 3.4\nchanged name of \"dtx\" to \"dty\" (horizonta"
+"l nozzle deflection)\nfll -- Thu Mar 02 12:51:23 2000 -- Version 3.3\nReduces"
+"ed the number of integrators to one in the longitudinal controller.\nfll -- T"
+"hu Mar 02 12:30:52 2000 -- Version 3.2\nMoved the blending function in the Nz"
+" and q controller.\nfll -- Thu Mar 02 10:50:25 2000 -- Version 3.1\nChanged i"
+"nput blocks to \"Signal generator\"\nfll -- Thu Mar 02 10:50:25 2000 -- Versi"
+"on 3.0\nVersion 3.0 is modified according to comments from users"
+  ModelVersionFormat	  "3.%<AutoIncrement:252>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "admire_fcs_lin"
+    Location		    [95, 74, 1011, 675]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    212
+    ScreenColor		    "yellow"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    off
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Inport
+      Name		      "Fes_dist"
+      Position		      [675, 13, 705, 27]
+      BackgroundColor	      "lightBlue"
+      Port		      "1"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Vt_dist"
+      Position		      [575, 63, 605, 77]
+      BackgroundColor	      "lightBlue"
+      Port		      "2"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Fas_dist"
+      Position		      [675, 113, 705, 127]
+      BackgroundColor	      "lightBlue"
+      Port		      "3"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "Frp_dist"
+      Position		      [575, 163, 605, 177]
+      BackgroundColor	      "lightBlue"
+      Port		      "4"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dle_dist"
+      Position		      [670, 213, 700, 227]
+      BackgroundColor	      "lightBlue"
+      Port		      "5"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "ldg_dist"
+      Position		      [575, 263, 605, 277]
+      BackgroundColor	      "lightBlue"
+      Port		      "6"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dty_dist"
+      Position		      [675, 313, 705, 327]
+      BackgroundColor	      "lightBlue"
+      Port		      "7"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "dtz_dist"
+      Position		      [575, 363, 605, 377]
+      BackgroundColor	      "lightBlue"
+      Port		      "8"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "u_dist"
+      Position		      [345, 363, 375, 377]
+      BackgroundColor	      "lightBlue"
+      Port		      "9"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "v_dist"
+      Position		      [345, 393, 375, 407]
+      BackgroundColor	      "lightBlue"
+      Port		      "10"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "w_dist"
+      Position		      [345, 423, 375, 437]
+      BackgroundColor	      "lightBlue"
+      Port		      "11"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "p_dist"
+      Position		      [345, 453, 375, 467]
+      BackgroundColor	      "lightBlue"
+      Port		      "12"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_1"
+      Position		      [30, 23, 60, 37]
+      BackgroundColor	      "lightBlue"
+      Port		      "13"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_2"
+      Position		      [80, 43, 110, 57]
+      BackgroundColor	      "lightBlue"
+      Port		      "14"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_3"
+      Position		      [30, 63, 60, 77]
+      BackgroundColor	      "lightBlue"
+      Port		      "15"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_4"
+      Position		      [80, 83, 110, 97]
+      BackgroundColor	      "lightBlue"
+      Port		      "16"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_5"
+      Position		      [30, 103, 60, 117]
+      BackgroundColor	      "lightBlue"
+      Port		      "17"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_6"
+      Position		      [80, 123, 110, 137]
+      BackgroundColor	      "lightBlue"
+      Port		      "18"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_7"
+      Position		      [30, 143, 60, 157]
+      BackgroundColor	      "lightBlue"
+      Port		      "19"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_8"
+      Position		      [80, 163, 110, 177]
+      BackgroundColor	      "lightBlue"
+      Port		      "20"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_9"
+      Position		      [30, 183, 60, 197]
+      BackgroundColor	      "lightBlue"
+      Port		      "21"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_10"
+      Position		      [80, 203, 110, 217]
+      BackgroundColor	      "lightBlue"
+      Port		      "22"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_11"
+      Position		      [30, 223, 60, 237]
+      BackgroundColor	      "lightBlue"
+      Port		      "23"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_12"
+      Position		      [80, 243, 110, 257]
+      BackgroundColor	      "lightBlue"
+      Port		      "24"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_13"
+      Position		      [30, 263, 60, 277]
+      BackgroundColor	      "lightBlue"
+      Port		      "25"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_14"
+      Position		      [80, 283, 110, 297]
+      BackgroundColor	      "lightBlue"
+      Port		      "26"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_15"
+      Position		      [30, 303, 60, 317]
+      BackgroundColor	      "lightBlue"
+      Port		      "27"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_16"
+      Position		      [80, 323, 110, 337]
+      BackgroundColor	      "lightBlue"
+      Port		      "28"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_17"
+      Position		      [30, 343, 60, 357]
+      BackgroundColor	      "lightBlue"
+      Port		      "29"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_18"
+      Position		      [80, 363, 110, 377]
+      BackgroundColor	      "lightBlue"
+      Port		      "30"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_19"
+      Position		      [30, 383, 60, 397]
+      BackgroundColor	      "lightBlue"
+      Port		      "31"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_20"
+      Position		      [80, 403, 110, 417]
+      BackgroundColor	      "lightBlue"
+      Port		      "32"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_21"
+      Position		      [30, 423, 60, 437]
+      BackgroundColor	      "lightBlue"
+      Port		      "33"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_22"
+      Position		      [80, 443, 110, 457]
+      BackgroundColor	      "lightBlue"
+      Port		      "34"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_23"
+      Position		      [30, 463, 60, 477]
+      BackgroundColor	      "lightBlue"
+      Port		      "35"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_24"
+      Position		      [80, 483, 110, 497]
+      BackgroundColor	      "lightBlue"
+      Port		      "36"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_25"
+      Position		      [30, 503, 60, 517]
+      BackgroundColor	      "lightBlue"
+      Port		      "37"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_26"
+      Position		      [80, 523, 110, 537]
+      BackgroundColor	      "lightBlue"
+      Port		      "38"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_27"
+      Position		      [30, 543, 60, 557]
+      BackgroundColor	      "lightBlue"
+      Port		      "39"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "y0_dist_28"
+      Position		      [80, 563, 110, 577]
+      BackgroundColor	      "lightBlue"
+      Port		      "40"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      SignalType	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Alt"
+      Position		      [265, 165, 350, 195]
+      BackgroundColor	      "gray"
+      NamePlacement	      "alternate"
+      Value		      "Alt+dalt_err"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Control\nsystem1"
+      Ports		      [10, 9, 0, 0, 0]
+      Position		      [785, 33, 850, 517]
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      FontAngle		      "italic"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Control\\nSystem')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Control\nsystem1"
+	Location		[2, 70, 1150, 816]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_Fes"
+	  Position		  [115, 513, 145, 527]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_Vt"
+	  Position		  [115, 543, 145, 557]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_Fas"
+	  Position		  [60, 233, 90, 247]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_Frp"
+	  Position		  [60, 263, 90, 277]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_dle"
+	  Position		  [425, 193, 455, 207]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ldg"
+	  Position		  [425, 258, 455, 272]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_dty"
+	  Position		  [425, 388, 455, 402]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_dtz"
+	  Position		  [425, 453, 455, 467]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "8"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_dist"
+	  Position		  [425, 518, 455, 532]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "9"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_y"
+	  Position		  [60, 293, 90, 307]
+	  BackgroundColor	  "gray"
+	  FontAngle		  "italic"
+	  Port			  "10"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_tv"
+	  Ports			  [6, 9, 0, 0, 0]
+	  Position		  [485, 160, 545, 560]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp('Adding\\ntrim\\nvalues')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_tv"
+	    Location		    [277, 74, 938, 550]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_tv_dle"
+	      Position		      [50, 88, 80, 102]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_tv_ldg"
+	      Position		      [50, 123, 80, 137]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "2"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_tv_tss"
+	      Position		      [50, 158, 80, 172]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "3"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_tv_dty"
+	      Position		      [50, 193, 80, 207]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "4"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_tv_dtz"
+	      Position		      [50, 228, 80, 242]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "5"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_tv_dist"
+	      Position		      [50, 318, 80, 332]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "6"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 4, 0, 0, 0]
+	      Position		      [130, 249, 135, 396]
+	      BackgroundColor	      "black"
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Outputs		      "4"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      Ports		      [1, 9, 0, 0, 0]
+	      Position		      [475, 65, 480, 405]
+	      BackgroundColor	      "black"
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Outputs		      "9"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [9, 1, 0, 0, 0]
+	      Position		      [285, 66, 290, 404]
+	      BackgroundColor	      "black"
+	      FontAngle		      "italic"
+	      Inputs		      "9"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_dle_out "
+	      Position		      [535, 88, 565, 102]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_ldg_out "
+	      Position		      [535, 123, 565, 137]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_tss_out "
+	      Position		      [535, 158, 565, 172]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_dty_out"
+	      Position		      [535, 193, 565, 207]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "4"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_dtz_out "
+	      Position		      [535, 228, 565, 242]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "5"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_u_dist_out "
+	      Position		      [535, 263, 565, 277]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "6"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_v_dist_out "
+	      Position		      [535, 298, 565, 312]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "7"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_w_dist _out"
+	      Position		      [535, 333, 565, 347]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "8"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_tv_p_dist_out "
+	      Position		      [535, 368, 565, 382]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Port		      "9"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_tv_dist"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_tv_dle_out "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      4
+	      DstBlock		      "FCS_ae_tv_dty_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      5
+	      DstBlock		      "FCS_ae_tv_dtz_out "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      6
+	      DstBlock		      "FCS_ae_tv_u_dist_out "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      7
+	      DstBlock		      "FCS_ae_tv_v_dist_out "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      8
+	      DstBlock		      "FCS_ae_tv_w_dist _out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      9
+	      DstBlock		      "FCS_ae_tv_p_dist_out "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_tv_dle"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_tv_ldg"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_tv_tss"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_tv_dty"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_tv_dtz"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Mux"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Mux"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Mux"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "FCS_ae_tv_ldg_out "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      DstBlock		      "FCS_ae_tv_tss_out "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_lat"
+	  Ports			  [6, 3, 0, 0, 0]
+	  Position		  [175, 166, 260, 344]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp('FCS_lat')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_lat"
+	    Location		    [81, 74, 1010, 719]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_lat_Altitude "
+	      Position		      [205, 38, 235, 52]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_lat_Mach "
+	      Position		      [205, 83, 235, 97]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontAngle		      "italic"
+	      Port		      "2"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_lat_Fas"
+	      Position		      [95, 117, 125, 133]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontAngle		      "italic"
+	      Port		      "3"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_lat_Frp"
+	      Position		      [50, 363, 80, 377]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontAngle		      "italic"
+	      Port		      "4"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_lat_y "
+	      Position		      [50, 460, 80, 480]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontAngle		      "italic"
+	      Port		      "5"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_lat_x0"
+	      Position		      [50, 405, 80, 425]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontAngle		      "italic"
+	      Port		      "6"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "  x"
+	      Position		      [110, 455, 170, 485]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      Elements		      "[1:12]"
+	      InputPortWidth	      "28"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Dot Product\nFg"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [640, 86, 670, 119]
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink3/Math/Dot Product"
+	      SourceType	      "Dot Product"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Dot Product \nG_ARI"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [762, 320, 793, 355]
+	      Orientation	      "down"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink3/Math/Dot Product"
+	      SourceType	      "Dot Product"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Dot Product \nG_beta"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [640, 361, 670, 394]
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink3/Math/Dot Product"
+	      SourceType	      "Dot Product"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Dot Product \nG_beta_dot"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [640, 486, 670, 519]
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink3/Math/Dot Product"
+	      SourceType	      "Dot Product"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Dot Product \nG_roll"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [640, 186, 670, 219]
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink3/Math/Dot Product"
+	      SourceType	      "Dot Product"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "FCS_lat_fcslat"
+	      Ports		      [2, 5, 0, 0, 0]
+	      Position		      [310, 19, 405, 111]
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      ShowPortLabels	      on
+	      MaskDisplay	      "disp('Calc of lateral\\namplfication\\n"
+" factors')\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"FCS_lat_fcslat"
+		Location		[331, 212, 876, 515]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"yellow"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		AutoZoom		on
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_lat_fcslat_Altitude"
+		  Position		  [75, 83, 105, 97]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_lat_fcslat_Mach"
+		  Position		  [75, 193, 105, 207]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function"
+		  Ports			  [2, 5, 0, 0, 0]
+		  Position		  [180, 30, 320, 260]
+		  ShowName		  off
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  FunctionName		  "fcslateral"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_lat_fcslat_Fg"
+		  Position		  [405, 48, 435, 62]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_lat_fcslat_GRoll"
+		  Position		  [405, 228, 435, 242]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "2"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_lat_fcslat_GARI"
+		  Position		  [405, 183, 435, 197]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "3"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_lat_fcslat_GBeta"
+		  Position		  [405, 93, 435, 107]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "4"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_lat_fcslat_dGBeta"
+		  Position		  [405, 138, 435, 152]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "5"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "FCS_lat_fcslat_Altitude"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_lat_fcslat_Mach"
+		  SrcPort		  1
+		  Points		  [0, 5]
+		  DstBlock		  "S-Function"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  1
+		  DstBlock		  "FCS_lat_fcslat_Fg"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  2
+		  DstBlock		  "FCS_lat_fcslat_GBeta"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  3
+		  DstBlock		  "FCS_lat_fcslat_dGBeta"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  4
+		  DstBlock		  "FCS_lat_fcslat_GARI"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  5
+		  DstBlock		  "FCS_lat_fcslat_GRoll"
+		  DstPort		  1
+		}
+		Annotation {
+		  Position		  [37, 17]
+		  BackgroundColor	  "green"
+		  Text			  "Level IV"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+		Annotation {
+		  Position		  [248, 275]
+		  BackgroundColor	  "yellow"
+		  Text			  "S-function"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "FCS_lat_fcslat_Fg"
+	      Position		      [690, 13, 805, 37]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      VariableName	      "FCS_lat_fcslat_Fg"
+	      Buffer		      "inf"
+	      Decimation	      "1"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "FCS_lat_ped"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [290, 347, 400, 393]
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      ShowPortLabels	      on
+	      MaskDisplay	      "disp('FCS lateral pedal\\nforce N to be"
+"ta rad')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"FCS_lat_ped"
+		Location		[130, 111, 628, 265]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"yellow"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		AutoZoom		on
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_lat_ped_Frp"
+		  Position		  [60, 58, 90, 72]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Degrees to\nRadians"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [290, 50, 320, 80]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink_extras/Transformations/Deg"
+"rees to\nRadians"
+		  SourceType		  "DegreesToRadians"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up\nTable\nFrp\ngradient"
+		  Position		  [220, 50, 250, 80]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  InputValues		  "[-200 0 200]"
+		  OutputValues		  "[5 0 -5]"
+		}
+		Block {
+		  BlockType		  Saturate
+		  Name			  "Saturation"
+		  Position		  [150, 50, 175, 80]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  UpperLimit		  "200"
+		  LowerLimit		  "-200"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_lat_ped_beta"
+		  Position		  [420, 58, 450, 72]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "Saturation"
+		  SrcPort		  1
+		  DstBlock		  "Look-Up\nTable\nFrp\ngradient"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_lat_ped_Frp"
+		  SrcPort		  1
+		  DstBlock		  "Saturation"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Degrees to\nRadians"
+		  SrcPort		  1
+		  DstBlock		  "FCS_lat_ped_beta"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Look-Up\nTable\nFrp\ngradient"
+		  SrcPort		  1
+		  DstBlock		  "Degrees to\nRadians"
+		  DstPort		  1
+		}
+		Annotation {
+		  Position		  [42, 17]
+		  BackgroundColor	  "green"
+		  Text			  "Level IV"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "FCS_lat_ped_beta"
+	      Position		      [620, 308, 740, 332]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      VariableName	      "FCS_lat_ped_beta"
+	      Buffer		      "inf"
+	      Decimation	      "1"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "FCS_lat_stck_p"
+	      Position		      [430, 179, 540, 201]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      VariableName	      "FCS_lat_stick_p"
+	      Buffer		      "inf"
+	      Decimation	      "1"
+	      SampleTime	      "-1"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "FCS_lat_stick"
+	      Ports		      [3, 1, 0, 0, 0]
+	      Position		      [155, 111, 250, 179]
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      ShowPortLabels	      on
+	      MaskDisplay	      "disp('FCS lateral stick\\ngradient\\n N"
+" to rad/s')\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"FCS_lat_stick"
+		Location		[368, 210, 920, 472]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"yellow"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		AutoZoom		on
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_lat_stick_Fas "
+		  Position		  [60, 58, 90, 72]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_lat_stick_Mach "
+		  Position		  [65, 108, 95, 122]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_lat_stick_Altitude "
+		  Position		  [65, 153, 95, 167]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "3"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Degrees to\nRadians"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [370, 50, 400, 80]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink_extras/Transformations/Deg"
+"rees to\nRadians"
+		  SourceType		  "DegreesToRadians"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [265, 50, 320, 80]
+		  Gain			  "180/80"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Saturate
+		  Name			  "Saturation"
+		  Position		  [200, 50, 225, 80]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  UpperLimit		  "80"
+		  LowerLimit		  "-80"
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  Position		  [200, 105, 220, 125]
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator 2"
+		  Position		  [200, 150, 220, 170]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_lat_stick_p"
+		  Position		  [465, 58, 495, 72]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "FCS_lat_stick_Fas "
+		  SrcPort		  1
+		  DstBlock		  "Saturation"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Degrees to\nRadians"
+		  SrcPort		  1
+		  DstBlock		  "FCS_lat_stick_p"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Saturation"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Degrees to\nRadians"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_lat_stick_Mach "
+		  SrcPort		  1
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_lat_stick_Altitude "
+		  SrcPort		  1
+		  DstBlock		  "Terminator 2"
+		  DstPort		  1
+		}
+		Annotation {
+		  Position		  [42, 17]
+		  BackgroundColor	  "green"
+		  Text			  "Level IV"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [355, 493, 360, 617]
+	      BackgroundColor	      "black"
+	      FontAngle		      "italic"
+	      Inputs		      "2"
+	      DisplayOption	      "none"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Phase Lag\nFilter Roll\n(with initial s"
+"tate)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [320, 190, 380, 230]
+	      Orientation	      "down"
+	      NamePlacement	      "alternate"
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[0 1]"
+	      D			      "[0.25  1]"
+	      X0		      "x0(39)"
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "Selector\n[p r Vt alpha phi]"
+	      Position		      [240, 514, 310, 536]
+	      FontAngle		      "italic"
+	      Elements		      "[4 6 1 2 9]"
+	      InputPortWidth	      "12"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [460, 392, 475, 463]
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [725, 459, 740, 501]
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [795, 374, 810, 416]
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum3"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [455, 244, 470, 286]
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "+-"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum4"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [725, 134, 740, 176]
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "-+"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum5"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [210, 389, 225, 496]
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "-+"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Wash-Out Beta_dot\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [545, 537, 590, 573]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[5 0]"
+	      D			      "[5  1]"
+	      X0		      "x0(40)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "beta_dot_\nestimation"
+	      Position		      [400, 540, 460, 570]
+	      FontAngle		      "italic"
+	      Expr		      "u[1]*sin(u[4])-u[2]*cos(u[4])+(u[6]/u[3"
+"])*sin(u[5])"
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "delta beta_meas"
+	      Position		      [320, 434, 390, 456]
+	      FontAngle		      "italic"
+	      Elements		      "3"
+	      InputPortWidth	      "12"
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "delta p_meas"
+	      Position		      [300, 264, 370, 286]
+	      FontAngle		      "italic"
+	      Elements		      "4"
+	      InputPortWidth	      "12"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "g"
+	      Position		      [280, 574, 310, 596]
+	      BackgroundColor	      "gray"
+	      FontAngle		      "italic"
+	      Value		      "9.81"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_lat_p "
+	      Position		      [865, 148, 895, 162]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_lat_beta "
+	      Position		      [870, 388, 900, 402]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontAngle		      "italic"
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_lat_pw"
+	      Position		      [865, 228, 895, 242]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontAngle		      "italic"
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_Fas"
+	      SrcPort		      1
+	      DstBlock		      "FCS_lat_stick"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Phase Lag\nFilter Roll\n(with initial s"
+"tate)"
+	      SrcPort		      1
+	      Points		      [0, 20]
+	      DstBlock		      "Sum3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "delta p_meas"
+	      SrcPort		      1
+	      DstBlock		      "Sum3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "beta_dot_\nestimation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Selector\n[p r Vt alpha phi]"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "g"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "beta_dot_\nestimation"
+	      SrcPort		      1
+	      DstBlock		      "Wash-Out Beta_dot\n(with initial state)"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum3"
+	      SrcPort		      1
+	      Points		      [135, 0; 0, -55]
+	      DstBlock		      "Dot Product \nG_roll"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product \nG_roll"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      DstBlock		      "Sum4"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product\nFg"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      DstBlock		      "Sum4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Wash-Out Beta_dot\n(with initial state)"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -45]
+	      DstBlock		      "Dot Product \nG_beta_dot"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product \nG_beta"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, 90]
+	      DstBlock		      "Sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product \nG_beta_dot"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -15]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum4"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		DstBlock		"Dot Product \nG_ARI"
+		DstPort			2
+	      }
+	      Branch {
+		DstBlock		"FCS_lat_p "
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product \nG_ARI"
+	      SrcPort		      1
+	      DstBlock		      "Sum2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      DstBlock		      "FCS_lat_beta "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      DstBlock		      "Sum2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_stick"
+	      SrcPort		      1
+	      Points		      [95, 0]
+	      Branch {
+		DstBlock		"Phase Lag\nFilter Roll\n(with initial"
+" state)"
+		DstPort			1
+	      }
+	      Branch {
+		Labels			[1, 0]
+		Points			[45, 0]
+		Branch {
+		  Points		  [205, 0; 0, -35]
+		  DstBlock		  "Dot Product\nFg"
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [0, 45]
+		  Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "FCS_lat_pw"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "FCS_lat_stck_p"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_fcslat"
+	      SrcPort		      2
+	      Points		      [180, 0; 0, 150]
+	      DstBlock		      "Dot Product \nG_roll"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_fcslat"
+	      SrcPort		      3
+	      Points		      [165, 0; 0, 225; 195, 0]
+	      DstBlock		      "Dot Product \nG_ARI"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_fcslat"
+	      SrcPort		      4
+	      Points		      [155, 0; 0, 260; 45, 0; 0, 25]
+	      DstBlock		      "Dot Product \nG_beta"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_fcslat"
+	      SrcPort		      5
+	      Points		      [140, 0; 0, 350; 60, 0; 0, 40]
+	      DstBlock		      "Dot Product \nG_beta_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "delta beta_meas"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      Points		      [130, 0; 0, -45]
+	      DstBlock		      "Dot Product \nG_beta"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_Frp"
+	      SrcPort		      1
+	      DstBlock		      "FCS_lat_ped"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_ped"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		DstBlock		"Sum"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -50]
+		DstBlock		"FCS_lat_ped_beta"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_Altitude "
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		Points			[0, 0]
+		DstBlock		"FCS_lat_fcslat"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 15; -210, 0; 0, 105]
+		DstBlock		"FCS_lat_stick"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_Mach "
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		Points			[0, -25; -200, 0; 0, 80]
+		DstBlock		"FCS_lat_stick"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 0]
+		DstBlock		"FCS_lat_fcslat"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_y "
+	      SrcPort		      1
+	      DstBlock		      "  x"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_x0"
+	      SrcPort		      1
+	      DstBlock		      "Sum5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "  x"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"Sum5"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 55]
+		DstBlock		"Selector\n[p r Vt alpha phi]"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum5"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"delta beta_meas"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -170]
+		DstBlock		"delta p_meas"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_lat_fcslat"
+	      SrcPort		      1
+	      Points		      [190, 0]
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"Dot Product\nFg"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"FCS_lat_fcslat_Fg"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [325, 575]
+	      BackgroundColor	      "yellow"
+	      Text		      "g"
+	      FontAngle		      "italic"
+	    }
+	    Annotation {
+	      Position		      [494, 547]
+	      BackgroundColor	      "yellow"
+	      Text		      "beta_dot"
+	      FontAngle		      "italic"
+	    }
+	    Annotation {
+	      Position		      [508, 402]
+	      BackgroundColor	      "yellow"
+	      Text		      "beta_error"
+	      FontAngle		      "italic"
+	    }
+	    Annotation {
+	      Position		      [77, 32]
+	      BackgroundColor	      "green"
+	      Text		      "Level III"
+	      DropShadow	      on
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_long"
+	  Ports			  [6, 3, 0, 0, 0]
+	  Position		  [175, 390, 260, 560]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp('FCS_long')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_long"
+	    Location		    [217, 74, 977, 667]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_long_pw "
+	      Position		      [50, 258, 80, 272]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_long_Altitude "
+	      Position		      [50, 58, 80, 72]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "2"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_long_Mach"
+	      Position		      [50, 98, 80, 112]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "3"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_long_y"
+	      Position		      [50, 177, 80, 193]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "4"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_long_Fes"
+	      Position		      [50, 218, 80, 232]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "5"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_long_Vt "
+	      Position		      [50, 138, 80, 152]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "6"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "FCS_long_Nz"
+	      Ports		      [5, 2, 0, 0, 0]
+	      Position		      [255, 323, 385, 537]
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      ShowPortLabels	      on
+	      MaskDisplay	      "disp('FCS_long_Nz')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"FCS_long_Nz"
+		Location		[69, 75, 967, 687]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"yellow"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		AutoZoom		on
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_Nz_Altitude "
+		  Position		  [60, 103, 90, 117]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  NamePlacement		  "alternate"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_Nz_Mach "
+		  Position		  [60, 158, 90, 172]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_Nz_y"
+		  Position		  [85, 338, 115, 352]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "3"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_Nz_Fes"
+		  Position		  [90, 488, 120, 502]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  NamePlacement		  "alternate"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "4"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_Nz_x0"
+		  Position		  [85, 293, 115, 307]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  NamePlacement		  "alternate"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "5"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product "
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [630, 251, 660, 284]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nKNz_I"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [510, 486, 540, 519]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nKNz_alfa"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [510, 256, 540, 289]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nKNz_p"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [510, 406, 540, 439]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nKNz_q"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [510, 331, 540, 364]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product 1"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [630, 326, 660, 359]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product 2"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [630, 401, 660, 434]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product 3"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [630, 481, 660, 514]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "FCS_long_Nz_stick"
+		  Ports			  [3, 1, 0, 0, 0]
+		  Position		  [205, 484, 340, 536]
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  ShowPortLabels	  on
+		  MaskDisplay		  "disp('FCS_long_Nz_stick')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "FCS_long_Nz_stick"
+		    Location		    [202, 267, 708, 513]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "yellow"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    AutoZoom		    on
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_Nz_stick_Fes "
+		    Position		    [65, 48, 95, 62]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_Nz_stick_Mach"
+		    Position		    [65, 128, 95, 142]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_Nz_stick_Altitude "
+		    Position		    [65, 188, 95, 202]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "3"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain"
+		    Position		    [255, 40, 335, 70]
+		    Gain		    "8/80"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation\n[-40,+80]   [Newton]"
+		    Position		    [180, 40, 205, 70]
+		    NamePlacement	    "alternate"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    UpperLimit		    "80"
+		    LowerLimit		    "-40"
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    "Terminator"
+		    Position		    [235, 125, 255, 145]
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    "Terminator 2"
+		    Position		    [235, 185, 255, 205]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_Nz_stick_Nz"
+		    Position		    [410, 48, 440, 62]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_Nz_stick_Fes "
+		    SrcPort		    1
+		    DstBlock		    "Saturation\n[-40,+80]   [Newton]"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Saturation\n[-40,+80]   [Newton]"
+		    SrcPort		    1
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Gain"
+		    SrcPort		    1
+		    DstBlock		    "FCS_long_Nz_stick_Nz"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_Nz_stick_Altitude "
+		    SrcPort		    1
+		    DstBlock		    "Terminator 2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_Nz_stick_Mach"
+		    SrcPort		    1
+		    DstBlock		    "Terminator"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    Position		    [47, 17]
+		    BackgroundColor	    "green"
+		    Text		    "Level V"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn"
+		  Position		  [235, 441, 340, 469]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Expr			  "cos(u[9])*cos(u[8])"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [700, 485, 730, 515]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Gain			  "-1"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up\nTable"
+		  Position		  [515, 20, 545, 50]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  InputValues		  "[0 0.58 0.62 2.5]"
+		  OutputValues		  "[0 0 1 1]"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "Nz"
+		  Position		  [315, 386, 370, 414]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "19"
+		  InputPortWidth	  "28"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function\nCalculates Nz-Gains as "
+"a\nfunction of altitude\nand Mach number."
+		  Ports			  [2, 4, 0, 0, 0]
+		  Position		  [210, 78, 280, 192]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  FunctionName		  "fcsnz"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "Selector\nx"
+		  Position		  [170, 331, 225, 359]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "[1:12]"
+		  InputPortWidth	  "28"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [3, 1, 0, 0, 0]
+		  Position		  [710, 231, 720, 459]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  IconShape		  "rectangular"
+		  Inputs		  "---"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum2"
+		  Ports			  [3, 1, 0, 0, 0]
+		  Position		  [395, 370, 405, 540]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  IconShape		  "rectangular"
+		  Inputs		  "-++"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum7"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [245, 278, 255, 367]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  IconShape		  "rectangular"
+		  Inputs		  "-+"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  ToWorkspace
+		  Name			  "To Workspace9"
+		  Position		  [400, 575, 555, 595]
+		  BackgroundColor	  "orange"
+		  ShowName		  off
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  VariableName		  "FCS_long_Nz_stick_Nz"
+		  Buffer		  "inf"
+		  Decimation		  "1"
+		  SampleTime		  "-1"
+		  SaveFormat		  "Matrix"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "delta_alfa"
+		  Position		  [315, 266, 370, 294]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "2"
+		  InputPortWidth	  "12"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "delta_q"
+		  Position		  [315, 341, 370, 369]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "5"
+		  InputPortWidth	  "12"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_long_Nz_control"
+		  Position		  [810, 338, 840, 352]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_long_Nz_fbi"
+		  Position		  [815, 493, 845, 507]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "2"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "Nz"
+		  SrcPort		  1
+		  DstBlock		  "Sum2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_Nz_Fes"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_Nz_stick"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Selector\nx"
+		  SrcPort		  1
+		  DstBlock		  "Sum7"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "FCS_long_Nz_x0"
+		  SrcPort		  1
+		  DstBlock		  "Sum7"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum7"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    Points		    [0, -45]
+		    DstBlock		    "delta_alfa"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 30]
+		    DstBlock		    "delta_q"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "FCS_long_Nz_y"
+		  SrcPort		  1
+		  Points		  [30, 0]
+		  Branch {
+		    DstBlock		    "Selector\nx"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 55]
+		    Branch {
+		    DstBlock		    "Nz"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 55]
+		    DstBlock		    "Fcn"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "FCS_long_Nz_Mach "
+		  SrcPort		  1
+		  Points		  [70, 0]
+		  Branch {
+		    DstBlock		    "S-Function\nCalculates Nz-Gains a"
+"s a\nfunction of altitude\nand Mach number."
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, -130]
+		    DstBlock		    "Look-Up\nTable"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 40; -125, 0; 0, 305]
+		    DstBlock		    "FCS_long_Nz_stick"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum2"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    Points		    [0, -25]
+		    DstBlock		    "Dot Product \nKNz_p"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 55]
+		    DstBlock		    "Dot Product \nKNz_I"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  Labels		  [0, 0]
+		  SrcBlock		  "S-Function\nCalculates Nz-Gains as "
+"a\nfunction of altitude\nand Mach number."
+		  SrcPort		  4
+		  Points		  [165, 0; 0, 315]
+		  DstBlock		  "Dot Product \nKNz_I"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "delta_alfa"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product \nKNz_alfa"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "delta_q"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product \nKNz_q"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "S-Function\nCalculates Nz-Gains as "
+"a\nfunction of altitude\nand Mach number."
+		  SrcPort		  3
+		  Points		  [135, 0; 0, 265]
+		  DstBlock		  "Dot Product \nKNz_p"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function\nCalculates Nz-Gains as "
+"a\nfunction of altitude\nand Mach number."
+		  SrcPort		  2
+		  Points		  [145, 0; 0, 220]
+		  DstBlock		  "Dot Product \nKNz_q"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function\nCalculates Nz-Gains as "
+"a\nfunction of altitude\nand Mach number."
+		  SrcPort		  1
+		  Points		  [210, 0]
+		  DstBlock		  "Dot Product \nKNz_alfa"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Dot Product "
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nKNz_alfa"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Dot Product 1"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nKNz_q"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product 1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Look-Up\nTable"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, 225]
+		  Branch {
+		    DstBlock		    "Dot Product "
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 75]
+		    Branch {
+		    DstBlock		    "Dot Product 1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 75]
+		    Branch {
+		    DstBlock		    "Dot Product 2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 80]
+		    DstBlock		    "Dot Product 3"
+		    DstPort		    1
+		    }
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Dot Product 2"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nKNz_p"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product 2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nKNz_I"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product 3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_Nz_control"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_Nz_fbi"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Dot Product 3"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_Nz_Altitude "
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  Branch {
+		    DstBlock		    "S-Function\nCalculates Nz-Gains a"
+"s a\nfunction of altitude\nand Mach number."
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 25; -100, 0; 0, 390]
+		    DstBlock		    "FCS_long_Nz_stick"
+		    DstPort		    3
+		  }
+		}
+		Line {
+		  SrcBlock		  "FCS_long_Nz_stick"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "To Workspace9"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Sum2"
+		    DstPort		    3
+		  }
+		}
+		Line {
+		  SrcBlock		  "Fcn"
+		  SrcPort		  1
+		  DstBlock		  "Sum2"
+		  DstPort		  2
+		}
+		Annotation {
+		  Position		  [315, 81]
+		  BackgroundColor	  "yellow"
+		  Text			  "KNz_alfa"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+		Annotation {
+		  Position		  [310, 111]
+		  BackgroundColor	  "yellow"
+		  Text			  "KNz_q"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+		Annotation {
+		  Position		  [310, 141]
+		  BackgroundColor	  "yellow"
+		  Text			  "KNz_p"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+		Annotation {
+		  Position		  [310, 171]
+		  BackgroundColor	  "yellow"
+		  Text			  "KNz_i"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+		Annotation {
+		  Position		  [52, 22]
+		  BackgroundColor	  "green"
+		  Text			  "Level IV"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "FCS_long_qVt"
+	      Ports		      [6, 4, 0, 0, 0]
+	      Position		      [255, 47, 385, 283]
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      ShowPortLabels	      on
+	      MaskDisplay	      "disp('FCS_long_qVt')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"FCS_long_qVt"
+		Location		[38, 74, 1024, 714]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"yellow"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		AutoZoom		on
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_qVt_Altitude"
+		  Position		  [170, 28, 200, 42]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_qVt_Mach"
+		  Position		  [170, 68, 200, 82]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "2"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_qVt_Vt"
+		  Position		  [325, 243, 355, 257]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "3"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_qVt_y"
+		  Position		  [35, 333, 65, 347]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "4"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_qVt_Fes"
+		  Position		  [40, 458, 70, 472]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  NamePlacement		  "alternate"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "5"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "FCS_long_qVt_pw "
+		  Position		  [45, 553, 75, 567]
+		  BackgroundColor	  "gray"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "6"
+		  PortWidth		  "-1"
+		  SampleTime		  "-1"
+		  DataType		  "auto"
+		  SignalType		  "auto"
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  ToWorkspace
+		  Name			  " "
+		  Position		  [455, 593, 530, 617]
+		  BackgroundColor	  "orange"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  VariableName		  "q_com_lim"
+		  Buffer		  "inf"
+		  Decimation		  "1"
+		  SampleTime		  "-1"
+		  SaveFormat		  "Matrix"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Compensator\n(with initial state)"
+		  Ports			  [1, 1, 0, 0, 0]
+		  Position		  [570, 212, 630, 248]
+		  FontName		  "Arial"
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink_extras/Additional\nLinear/"
+"Transfer Fcn\n(with initial states)"
+		  SourceType		  "Transfer Function with Initial Stat"
+"es"
+		  N			  "[15 10]"
+		  D			  "[1  10]"
+		  X0			  "x0(41)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product "
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [715, 291, 745, 324]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nK_I"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [560, 531, 590, 564]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nK_P"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [560, 446, 590, 479]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nK_Vt"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [800, 206, 830, 239]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nK_alfa"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [560, 296, 590, 329]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product \nK_q"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [560, 371, 590, 404]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product 1"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [715, 366, 745, 399]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product 2"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [715, 526, 745, 559]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Dot Product 3"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [715, 441, 745, 474]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  SourceBlock		  "simulink3/Math/Dot Product"
+		  SourceType		  "Dot Product"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "FCS_long_qVt_alim"
+		  Ports			  [3, 1, 0, 0, 0]
+		  Position		  [285, 459, 410, 521]
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  ShowPortLabels	  on
+		  MaskDisplay		  "disp('FCS_long_qVt_alim')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "FCS_long_qVt_alim"
+		    Location		    [108, 90, 992, 600]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "yellow"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    AutoZoom		    on
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_y"
+		    Position		    [60, 358, 90, 372]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_q "
+		    Position		    [60, 43, 90, 57]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_pw"
+		    Position		    [60, 433, 90, 447]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "3"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "FCS_long_qVt_alim_nega"
+		    Ports		    [4, 2, 0, 0, 0]
+		    Position		    [315, 243, 470, 382]
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    ShowPortLabels	    on
+		    MaskDisplay		    "disp('FCS_long_qVt_alim\\nnegativ"
+"e alpha')"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    on
+		    MaskIconRotate	    "none"
+		    MaskIconUnits	    "autoscale"
+		    System {
+		    Name		    "FCS_long_qVt_alim_nega"
+		    Location		    [74, 216, 1016, 588]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "yellow"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    AutoZoom		    on
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_nega_qcom "
+		    Position		    [430, 268, 460, 282]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_nega_alpha "
+		    Position		    [85, 193, 115, 207]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_nega_Mach "
+		    Position		    [85, 238, 115, 252]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "3"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_nega_qdem "
+		    Position		    [425, 168, 455, 182]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "4"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Lookup
+		    Name		    "Look-Up\nTable1"
+		    Position		    [215, 230, 245, 260]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    InputValues		    "[0 1 1 2.5]"
+		    OutputValues	    "[-8 -8 -3 -3]"
+		    }
+		    Block {
+		    BlockType		    MinMax
+		    Name		    "Max"
+		    Ports		    [2, 1, 0, 0, 0]
+		    Position		    [675, 213, 705, 262]
+		    NamePlacement	    "alternate"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Function		    "max"
+		    Inputs		    "2"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator\nNeg. alpha"
+		    Position		    [280, 175, 315, 270]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Operator		    "<="
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch3"
+		    Position		    [560, 147, 600, 303]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Threshold		    "0.5"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_alim_nega_lim"
+		    Position		    [810, 88, 840, 102]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_alim_nega_q "
+		    Position		    [815, 233, 845, 247]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_nega_Mach "
+		    SrcPort		    1
+		    DstBlock		    "Look-Up\nTable1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Look-Up\nTable1"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator\nNeg. alpha"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_nega_alpha "
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator\nNeg. alpha"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Max"
+		    SrcPort		    1
+		    DstBlock		    "FCS_long_qVt_alim_nega_q "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_nega_qdem "
+		    SrcPort		    1
+		    DstBlock		    "Switch3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator\nNeg. alpha"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    DstBlock		    "Switch3"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, -130]
+		    DstBlock		    "FCS_long_qVt_alim_nega_lim"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Switch3"
+		    SrcPort		    1
+		    DstBlock		    "Max"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_nega_qcom "
+		    SrcPort		    1
+		    Points		    [80, 0]
+		    Branch {
+		    DstBlock		    "Switch3"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, 55; 90, 0; 0, -80]
+		    DstBlock		    "Max"
+		    DstPort		    2
+		    }
+		    }
+		    Annotation {
+		    Position		    [37, 17]
+		    BackgroundColor	    "green"
+		    Text		    "Level VI"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "FCS_long_qVt_alim_posa"
+		    Ports		    [4, 2, 0, 0, 0]
+		    Position		    [315, 33, 470, 172]
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    ShowPortLabels	    on
+		    MaskDisplay		    "disp('FCS_long_qVt_alim\\npositiv"
+"e alpha')"
+		    MaskIconFrame	    on
+		    MaskIconOpaque	    on
+		    MaskIconRotate	    "none"
+		    MaskIconUnits	    "autoscale"
+		    System {
+		    Name		    "FCS_long_qVt_alim_posa"
+		    Location		    [145, 231, 990, 531]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "yellow"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    AutoZoom		    on
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_posa_qcom "
+		    Position		    [415, 203, 445, 217]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_posa_alpha "
+		    Position		    [80, 138, 110, 152]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_posa_Mach "
+		    Position		    [80, 183, 110, 197]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "3"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_alim_posa_qdem "
+		    Position		    [420, 123, 450, 137]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "4"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Lookup
+		    Name		    "Look-Up\nTable"
+		    Position		    [200, 175, 230, 205]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    InputValues		    "[0 0.8 0.8 1 1 1.3 1.3 2.5 ] "
+		    OutputValues	    "[28 28 23 23 18 18 13 13 ]"
+		    }
+		    Block {
+		    BlockType		    MinMax
+		    Name		    "Min"
+		    Ports		    [2, 1, 0, 0, 0]
+		    Position		    [630, 156, 660, 214]
+		    NamePlacement	    "alternate"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Function		    "min"
+		    Inputs		    "2"
+		    }
+		    Block {
+		    BlockType		    RelationalOperator
+		    Name		    "Relational\nOperator\nPos. alpha"
+		    Position		    [270, 120, 305, 215]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Operator		    ">="
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch2"
+		    Position		    [550, 110, 590, 230]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Threshold		    "0.5"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_alim_posa_q"
+		    Position		    [735, 178, 765, 192]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_alim_posa_lim"
+		    Position		    [735, 53, 765, 67]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_posa_alpha "
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator\nPos. alpha"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_posa_Mach "
+		    SrcPort		    1
+		    DstBlock		    "Look-Up\nTable"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Look-Up\nTable"
+		    SrcPort		    1
+		    DstBlock		    "Relational\nOperator\nPos. alpha"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Relational\nOperator\nPos. alpha"
+		    SrcPort		    1
+		    Points		    [10, 0]
+		    Branch {
+		    DstBlock		    "Switch2"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, -110]
+		    DstBlock		    "FCS_long_qVt_alim_posa_lim"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_posa_qdem "
+		    SrcPort		    1
+		    DstBlock		    "Switch2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Min"
+		    SrcPort		    1
+		    DstBlock		    "FCS_long_qVt_alim_posa_q"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch2"
+		    SrcPort		    1
+		    DstBlock		    "Min"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_posa_qcom "
+		    SrcPort		    1
+		    Points		    [80, 0]
+		    Branch {
+		    DstBlock		    "Switch2"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, 60; 75, 0; 0, -70]
+		    DstBlock		    "Min"
+		    DstPort		    2
+		    }
+		    }
+		    Annotation {
+		    Position		    [37, 22]
+		    BackgroundColor	    "green"
+		    Text		    "Level VI"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator3"
+		    Ports		    [3, 1, 0, 0, 0]
+		    Position		    [605, 222, 640, 278]
+		    ShowName		    off
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Operator		    "OR"
+		    Inputs		    "3"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator4"
+		    Ports		    [1, 1, 0, 0, 0]
+		    Position		    [525, 82, 560, 138]
+		    ShowName		    off
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Operator		    "NOT"
+		    Inputs		    "1"
+		    }
+		    Block {
+		    BlockType		    Logic
+		    Name		    "Logical\nOperator5"
+		    Ports		    [1, 1, 0, 0, 0]
+		    Position		    [550, 360, 580, 390]
+		    Orientation		    "up"
+		    ShowName		    off
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Operator		    "NOT"
+		    Inputs		    "1"
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "Mach"
+		    Position		    [145, 215, 185, 235]
+		    NamePlacement	    "alternate"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Expr		    "u[21]"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    Ports		    [2, 1, 0, 0, 0]
+		    Position		    [380, 417, 410, 448]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Inputs		    "2"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Radians\nto Degrees11"
+		    Ports		    [1, 1, 0, 0, 0]
+		    Position		    [205, 145, 235, 175]
+		    ShowName		    off
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    SourceBlock		    "simulink_extras/Transformations/R"
+"adians\nto Degrees"
+		    SourceType		    "RadiansToDegrees"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Radians\nto Degrees12"
+		    Ports		    [1, 1, 0, 0, 0]
+		    Position		    [160, 425, 190, 455]
+		    ShowName		    off
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    SourceBlock		    "simulink_extras/Transformations/R"
+"adians\nto Degrees"
+		    SourceType		    "RadiansToDegrees"
+		    }
+		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation"
+		    Position		    [205, 210, 235, 240]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    UpperLimit		    "2.5"
+		    LowerLimit		    "0"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    Position		    [680, 190, 720, 310]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Threshold		    "0.5"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch1"
+		    Position		    [600, 50, 640, 170]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Threshold		    "0.5"
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "alfa"
+		    Position		    [145, 150, 185, 170]
+		    NamePlacement	    "alternate"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Expr		    "u[2]"
+		    }
+		    Block {
+		    BlockType		    Lookup
+		    Name		    "pw demand\ndead zone"
+		    Position		    [205, 425, 265, 455]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    InputValues		    "[-180 -10 -8 8 10 180]"
+		    OutputValues	    "[0 0 0 0 0 0] "
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "q dem for\nzero alpha dot "
+		    Position		    [200, 355, 240, 375]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Expr		    "(u[4]*cos(u[2])+u[6]*sin(u[2]))*t"
+"an(u[3])+(u[19]-cos(u[8])*cos(u[9]))*9.80665*cos(u[2])/(u[1]*cos(u[3]))"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_alim_qlim"
+		    Position		    [790, 243, 820, 257]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator3"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, 100]
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "alfa"
+		    SrcPort		    1
+		    DstBlock		    "Radians\nto Degrees11"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Mach"
+		    SrcPort		    1
+		    DstBlock		    "Saturation"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Radians\nto Degrees11"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    Points		    [0, -75]
+		    DstBlock		    "FCS_long_qVt_alim_posa"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 135]
+		    DstBlock		    "FCS_long_qVt_alim_nega"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Saturation"
+		    SrcPort		    1
+		    Points		    [30, 0]
+		    Branch {
+		    Points		    [0, -105]
+		    DstBlock		    "FCS_long_qVt_alim_posa"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, 105]
+		    DstBlock		    "FCS_long_qVt_alim_nega"
+		    DstPort		    3
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_y"
+		    SrcPort		    1
+		    Points		    [30, 0]
+		    Branch {
+		    DstBlock		    "q dem for\nzero alpha dot "
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -140]
+		    Branch {
+		    DstBlock		    "Mach"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -65]
+		    DstBlock		    "alfa"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "q dem for\nzero alpha dot "
+		    SrcPort		    1
+		    Points		    [30, 0]
+		    Branch {
+		    DstBlock		    "FCS_long_qVt_alim_nega"
+		    DstPort		    4
+		    }
+		    Branch {
+		    Points		    [0, -210]
+		    DstBlock		    "FCS_long_qVt_alim_posa"
+		    DstPort		    4
+		    }
+		    Branch {
+		    Points		    [0, 60]
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_q "
+		    SrcPort		    1
+		    Points		    [190, 0]
+		    Branch {
+		    DstBlock		    "FCS_long_qVt_alim_posa"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 210]
+		    DstBlock		    "FCS_long_qVt_alim_nega"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_nega"
+		    SrcPort		    2
+		    Points		    [55, 0; 0, -200]
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_posa"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator4"
+		    SrcPort		    1
+		    DstBlock		    "Switch1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_nega"
+		    SrcPort		    1
+		    Points		    [35, 0; 0, -30]
+		    Branch {
+		    DstBlock		    "Logical\nOperator4"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_posa"
+		    SrcPort		    2
+		    Points		    [15, 0; 0, 90]
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    DstBlock		    "FCS_long_qVt_alim_qlim"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Radians\nto Degrees12"
+		    SrcPort		    1
+		    DstBlock		    "pw demand\ndead zone"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [240, 0; 0, -145]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_alim_pw"
+		    SrcPort		    1
+		    DstBlock		    "Radians\nto Degrees12"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "pw demand\ndead zone"
+		    SrcPort		    1
+		    Points		    [75, 0]
+		    Branch {
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 50; 220, 0]
+		    DstBlock		    "Logical\nOperator5"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Logical\nOperator5"
+		    SrcPort		    1
+		    Points		    [0, -85]
+		    DstBlock		    "Logical\nOperator3"
+		    DstPort		    3
+		    }
+		    Annotation {
+		    Position		    [37, 17]
+		    BackgroundColor	    "green"
+		    Text		    "Level V"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "FCS_long_qVt_fcslong"
+		  Ports			  [2, 5, 0, 0, 0]
+		  Position		  [345, 13, 475, 97]
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  ShowPortLabels	  on
+		  MaskDisplay		  "disp('FCS_long_qVt_fcslong')\n"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "FCS_long_qVt_fcslong"
+		    Location		    [349, 231, 948, 527]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "yellow"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    AutoZoom		    on
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_fcslong_Altitude"
+		    Position		    [135, 78, 165, 92]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_fcslong_Mach"
+		    Position		    [135, 193, 165, 207]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    "S-Function1"
+		    Ports		    [2, 5, 0, 0, 0]
+		    Position		    [280, 26, 370, 254]
+		    ShowName		    off
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    FunctionName	    "fcslongitudinal"
+		    PortCounts		    "[]"
+		    SFunctionModules	    "''"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_fcslong_Kvt"
+		    Position		    [470, 223, 500, 237]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_fcslong_Kalfa"
+		    Position		    [470, 43, 500, 57]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_fcslong_Kq"
+		    Position		    [470, 178, 500, 192]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "3"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_fcslong_KI"
+		    Position		    [470, 88, 500, 102]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "4"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_fcslong_KP"
+		    Position		    [470, 133, 500, 147]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "5"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_fcslong_Mach"
+		    SrcPort		    1
+		    DstBlock		    "S-Function1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_fcslong_Altitude"
+		    SrcPort		    1
+		    DstBlock		    "S-Function1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "S-Function1"
+		    SrcPort		    1
+		    DstBlock		    "FCS_long_qVt_fcslong_Kalfa"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "S-Function1"
+		    SrcPort		    2
+		    DstBlock		    "FCS_long_qVt_fcslong_KI"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "S-Function1"
+		    SrcPort		    3
+		    DstBlock		    "FCS_long_qVt_fcslong_KP"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "S-Function1"
+		    SrcPort		    4
+		    DstBlock		    "FCS_long_qVt_fcslong_Kq"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "S-Function1"
+		    SrcPort		    5
+		    DstBlock		    "FCS_long_qVt_fcslong_Kvt"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    Position		    [37, 17]
+		    BackgroundColor	    "green"
+		    Text		    "Level V"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    }
+		    Annotation {
+		    Position		    [327, 268]
+		    BackgroundColor	    "yellow"
+		    Text		    "S-function"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "FCS_long_qVt_stick"
+		  Ports			  [3, 1, 0, 0, 0]
+		  Position		  [115, 450, 250, 530]
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  ShowPortLabels	  on
+		  MaskDisplay		  "disp('FCS_long_qVt_stick')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "FCS_long_qVt_stick"
+		    Location		    [222, 195, 956, 442]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "yellow"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    ZoomFactor		    "100"
+		    AutoZoom		    on
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_stick_Fes "
+		    Position		    [85, 68, 115, 82]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_stick_Mach "
+		    Position		    [85, 133, 115, 147]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "2"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "FCS_long_qVt_stick_Altitude "
+		    Position		    [85, 188, 115, 202]
+		    BackgroundColor	    "gray"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "3"
+		    PortWidth		    "-1"
+		    SampleTime		    "-1"
+		    DataType		    "auto"
+		    SignalType		    "auto"
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    ToWorkspace
+		    Name		    " "
+		    Position		    [585, 19, 705, 41]
+		    BackgroundColor	    "orange"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    VariableName	    "qVt_stick_q_com"
+		    Buffer		    "inf"
+		    Decimation		    "1"
+		    SampleTime		    "-1"
+		    SaveFormat		    "Matrix"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Degrees to\nRadians"
+		    Ports		    [1, 1, 0, 0, 0]
+		    Position		    [485, 60, 515, 90]
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    SourceBlock		    "simulink_extras/Transformations/D"
+"egrees to\nRadians"
+		    SourceType		    "DegreesToRadians"
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain"
+		    Position		    [370, 60, 450, 90]
+		    Gain		    "22.8083/80"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation\n[-40,+80]   [Newton]"
+		    Position		    [230, 60, 255, 90]
+		    NamePlacement	    "alternate"
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    UpperLimit		    "80"
+		    LowerLimit		    "-40"
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    "Terminator"
+		    Position		    [270, 185, 290, 205]
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    "Terminator 2"
+		    Position		    [270, 130, 290, 150]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "FCS_long_qVt_stick_q "
+		    Position		    [615, 68, 645, 82]
+		    BackgroundColor	    "orange"
+		    DropShadow		    on
+		    FontName		    "Arial"
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "Gain"
+		    SrcPort		    1
+		    DstBlock		    "Degrees to\nRadians"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_stick_Altitude "
+		    SrcPort		    1
+		    DstBlock		    "Terminator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_stick_Fes "
+		    SrcPort		    1
+		    DstBlock		    "Saturation\n[-40,+80]   [Newton]"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "FCS_long_qVt_stick_Mach "
+		    SrcPort		    1
+		    DstBlock		    "Terminator 2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Degrees to\nRadians"
+		    SrcPort		    1
+		    Points		    [30, 0]
+		    Branch {
+		    DstBlock		    "FCS_long_qVt_stick_q "
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -45]
+		    DstBlock		    " "
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Saturation\n[-40,+80]   [Newton]"
+		    SrcPort		    1
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    Position		    [47, 17]
+		    BackgroundColor	    "green"
+		    Text		    "Level V"
+		    DropShadow		    on
+		    FontSize		    12
+		    FontAngle		    "italic"
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [805, 530, 835, 560]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Gain			  "-1"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up\nTable1"
+		  Position		  [610, 120, 640, 150]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  InputValues		  "[0 0.58 0.62 2.5]"
+		  OutputValues		  "[1 1 0 0]"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function\nCalculates trim\nvalues"
+", x0, as a\nfunction of altitude\nand Mach number."
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [170, 126, 215, 159]
+		  Orientation		  "left"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  FunctionName		  "fcsx0"
+		  PortCounts		  "[]"
+		  SFunctionModules	  "''"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [3, 1, 0, 0, 0]
+		  Position		  [795, 271, 810, 499]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  IconShape		  "rectangular"
+		  Inputs		  "---"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum2"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [435, 422, 445, 513]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  IconShape		  "rectangular"
+		  Inputs		  "-+"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum6"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [445, 183, 455, 272]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  IconShape		  "rectangular"
+		  Inputs		  "-+"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum7"
+		  Ports			  [2, 1, 0, 0, 0]
+		  Position		  [195, 273, 205, 362]
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  IconShape		  "rectangular"
+		  Inputs		  "-+"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "Vt"
+		  Position		  [310, 191, 365, 219]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "1"
+		  InputPortWidth	  "28"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "delta_alfa"
+		  Position		  [310, 306, 365, 334]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "2"
+		  InputPortWidth	  "12"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "delta_q"
+		  Position		  [250, 381, 305, 409]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "5"
+		  InputPortWidth	  "12"
+		}
+		Block {
+		  BlockType		  Selector
+		  Name			  "x"
+		  Position		  [110, 326, 165, 354]
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Elements		  "[1:12]"
+		  InputPortWidth	  "28"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_long_qVt_x0"
+		  Position		  [35, 138, 65, 152]
+		  Orientation		  "left"
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_long_qVt_tss"
+		  Position		  [895, 218, 925, 232]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "2"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_long_qVt_q"
+		  Position		  [895, 378, 925, 392]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "3"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "FCS_long_qVt_fbi"
+		  Position		  [895, 538, 925, 552]
+		  BackgroundColor	  "orange"
+		  DropShadow		  on
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		  Port			  "4"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_fcslong"
+		  SrcPort		  4
+		  Points		  [25, 0; 0, 470]
+		  DstBlock		  "Dot Product \nK_I"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_fcslong"
+		  SrcPort		  5
+		  Points		  [10, 0; 0, 370]
+		  DstBlock		  "Dot Product \nK_P"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_Altitude"
+		  SrcPort		  1
+		  Points		  [100, 0]
+		  Branch {
+		    DstBlock		    "FCS_long_qVt_fcslong"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 25]
+		    Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "S-Function\nCalculates trim\nvalu"
+"es, x0, as a\nfunction of altitude\nand Mach number."
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [-290, 0; 0, 455]
+		    DstBlock		    "FCS_long_qVt_stick"
+		    DstPort		    3
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_Mach"
+		  SrcPort		  1
+		  Points		  [80, 0]
+		  Branch {
+		    Points		    [45, 0]
+		    Branch {
+		    DstBlock		    "FCS_long_qVt_fcslong"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 60]
+		    DstBlock		    "Look-Up\nTable1"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [0, 30]
+		    Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "S-Function\nCalculates trim\nvalu"
+"es, x0, as a\nfunction of altitude\nand Mach number."
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [-265, 0; 0, 385]
+		    DstBlock		    "FCS_long_qVt_stick"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "delta_alfa"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product \nK_alfa"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "x"
+		  SrcPort		  1
+		  DstBlock		  "Sum7"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum7"
+		  SrcPort		  1
+		  Points		  [20, 0]
+		  Branch {
+		    DstBlock		    "delta_alfa"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 75]
+		    DstBlock		    "delta_q"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "delta_q"
+		  SrcPort		  1
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "Dot Product \nK_q"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 50]
+		    DstBlock		    "Sum2"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_y"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    DstBlock		    "x"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -135]
+		    DstBlock		    "Vt"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 95; 190, 0]
+		    DstBlock		    "FCS_long_qVt_alim"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "S-Function\nCalculates trim\nvalues"
+", x0, as a\nfunction of altitude\nand Mach number."
+		  SrcPort		  1
+		  Points		  [-70, 0]
+		  Branch {
+		    Points		    [0, 150]
+		    DstBlock		    "Sum7"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "FCS_long_qVt_x0"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_Fes"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_qVt_stick"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_alim"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  Branch {
+		    DstBlock		    "Sum2"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 115]
+		    DstBlock		    " "
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_stick"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_qVt_alim"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_pw "
+		  SrcPort		  1
+		  Points		  [190, 0]
+		  DstBlock		  "FCS_long_qVt_alim"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Compensator\n(with initial state)"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product \nK_Vt"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nK_Vt"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_qVt_tss"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_fcslong"
+		  SrcPort		  1
+		  Points		  [250, 0; 0, 190]
+		  DstBlock		  "Dot Product \nK_Vt"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum2"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    DstBlock		    "Dot Product \nK_P"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 85]
+		    DstBlock		    "Dot Product \nK_I"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nK_P"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product 3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nK_I"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product 2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_qVt_q"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nK_q"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product 1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Dot Product 1"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Dot Product "
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Dot Product \nK_alfa"
+		  SrcPort		  1
+		  DstBlock		  "Dot Product "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Look-Up\nTable1"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, 165]
+		  Branch {
+		    DstBlock		    "Dot Product "
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 75]
+		    Branch {
+		    DstBlock		    "Dot Product 1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 75]
+		    Branch {
+		    Points		    [0, 85]
+		    DstBlock		    "Dot Product 2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Dot Product 3"
+		    DstPort		    1
+		    }
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Vt"
+		  SrcPort		  1
+		  DstBlock		  "Sum6"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_Vt"
+		  SrcPort		  1
+		  DstBlock		  "Sum6"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum6"
+		  SrcPort		  1
+		  DstBlock		  "Compensator\n(with initial state)"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Dot Product 3"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "FCS_long_qVt_fbi"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Dot Product 2"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_fcslong"
+		  SrcPort		  3
+		  Points		  [40, 0; 0, 325]
+		  DstBlock		  "Dot Product \nK_q"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "FCS_long_qVt_fcslong"
+		  SrcPort		  2
+		  Points		  [55, 0; 0, 265]
+		  DstBlock		  "Dot Product \nK_alfa"
+		  DstPort		  1
+		}
+		Annotation {
+		  Position		  [113, 287]
+		  BackgroundColor	  "yellow"
+		  Text			  "x0"
+		  FontName		  "Arial"
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+		Annotation {
+		  Position		  [42, 17]
+		  BackgroundColor	  "green"
+		  Text			  "Level IV"
+		  DropShadow		  on
+		  FontSize		  12
+		  FontAngle		  "italic"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [565, 440, 595, 470]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      ExternalReset	      "none"
+	      InitialConditionSource  "internal"
+	      InitialCondition	      "0"
+	      LimitOutput	      off
+	      UpperSaturationLimit    "inf"
+	      LowerSaturationLimit    "-inf"
+	      ShowSaturationPort      off
+	      ShowStatePort	      off
+	      AbsoluteTolerance	      "auto"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Ports		      [3, 1, 0, 0, 0]
+	      Position		      [620, 266, 630, 494]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "+++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      Ports		      [2, 1, 0, 0, 0]
+	      Position		      [530, 395, 540, 515]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      IconShape		      "rectangular"
+	      Inputs		      "++"
+	      SaturateOnIntegerOverflow	on
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_long_x0"
+	      Position		      [670, 68, 700, 82]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_long_q"
+	      Position		      [670, 373, 700, 387]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_long_tss"
+	      Position		      [670, 128, 700, 142]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_Vt "
+	      SrcPort		      1
+	      DstBlock		      "FCS_long_qVt"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_Mach"
+	      SrcPort		      1
+	      Points		      [65, 0]
+	      Branch {
+		DstBlock		"FCS_long_qVt"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 285]
+		DstBlock		"FCS_long_Nz"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_y"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		DstBlock		"FCS_long_qVt"
+		DstPort			4
+	      }
+	      Branch {
+		Points			[0, 245]
+		DstBlock		"FCS_long_Nz"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_qVt"
+	      SrcPort		      1
+	      Points		      [90, 0]
+	      Branch {
+		DstBlock		"FCS_long_x0"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 500; -275, 0; 0, -65]
+		DstBlock		"FCS_long_Nz"
+		DstPort			5
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_Fes"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		DstBlock		"FCS_long_qVt"
+		DstPort			5
+	      }
+	      Branch {
+		Points			[0, 245]
+		DstBlock		"FCS_long_Nz"
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_pw "
+	      SrcPort		      1
+	      DstBlock		      "FCS_long_qVt"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_qVt"
+	      SrcPort		      2
+	      DstBlock		      "FCS_long_tss"
+	      DstPort		      1
+	    }
+	    Line {
+	      Labels		      [0, 0]
+	      SrcBlock		      "FCS_long_qVt"
+	      SrcPort		      3
+	      Points		      [170, 0; 0, 110]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_Nz"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_qVt"
+	      SrcPort		      4
+	      Points		      [125, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_Nz"
+	      SrcPort		      2
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Integrator"
+	      SrcPort		      1
+	      DstBlock		      "Sum"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "FCS_long_Altitude "
+	      SrcPort		      1
+	      Points		      [75, 0]
+	      Branch {
+		DstBlock		"FCS_long_qVt"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 285]
+		DstBlock		"FCS_long_Nz"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "FCS_long_q"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Position		      [42, 22]
+	      BackgroundColor	      "green"
+	      Text		      "Level III"
+	      DropShadow	      on
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	    Annotation {
+	      Position		      [428, 256]
+	      BackgroundColor	      "yellow"
+	      Text		      "q_feedback\nto integrator"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	    Annotation {
+	      Position		      [433, 486]
+	      BackgroundColor	      "yellow"
+	      Text		      "Nz_feedback\nto integrator"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	    Annotation {
+	      Position		      [647, 369]
+	      BackgroundColor	      "yellow"
+	      Text		      "[rad]"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From"
+	  Position		  [20, 101, 90, 129]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  GotoTag		  "Altitude"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  Position		  [20, 141, 90, 169]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  GotoTag		  "Mach"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [580, 383, 585, 562]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Inputs		  "4"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "fcs_p"
+	  Position		  [615, 63, 645, 77]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "fcs_q"
+	  Position		  [615, 98, 645, 112]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "fcs_beta"
+	  Position		  [615, 133, 645, 147]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dle"
+	  Position		  [615, 173, 645, 187]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ldg"
+	  Position		  [615, 218, 645, 232]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "tss"
+	  Position		  [615, 263, 645, 277]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dty"
+	  Position		  [615, 308, 645, 322]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dtz"
+	  Position		  [615, 353, 645, 367]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "8"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dis_out"
+	  Position		  [615, 468, 645, 482]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "9"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "FCS_long"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -45; -125, 0; 0, -45]
+	  DstBlock		  "FCS_lat"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "FCS_lat"
+	  SrcPort		  3
+	  Points		  [10, 0; 0, 50; -130, 0; 0, 35]
+	  DstBlock		  "FCS_long"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_Fes"
+	  SrcPort		  1
+	  DstBlock		  "FCS_long"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "FCS_Vt"
+	  SrcPort		  1
+	  DstBlock		  "FCS_long"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "FCS_y"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  Branch {
+	    DstBlock		    "FCS_lat"
+	    DstPort		    5
+	  }
+	  Branch {
+	    Points		    [0, 190]
+	    DstBlock		    "FCS_long"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_Fas"
+	  SrcPort		  1
+	  DstBlock		  "FCS_lat"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FCS_Frp"
+	  SrcPort		  1
+	  DstBlock		  "FCS_lat"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "From"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 65]
+	  Branch {
+	    DstBlock		    "FCS_lat"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 250]
+	    DstBlock		    "FCS_long"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 55]
+	  Branch {
+	    DstBlock		    "FCS_lat"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 250]
+	    DstBlock		    "FCS_long"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "FCS_lat"
+	  SrcPort		  2
+	  Points		  [90, 0; 0, -115]
+	  DstBlock		  "fcs_beta"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_long"
+	  SrcPort		  2
+	  Points		  [45, 0; 0, -370]
+	  DstBlock		  "fcs_q"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  1
+	  DstBlock		  "dle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  2
+	  DstBlock		  "ldg"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_dle"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_tv"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  3
+	  DstBlock		  "tss"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ldg"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_tv"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  4
+	  DstBlock		  "dty"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  5
+	  DstBlock		  "dtz"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_dty"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_tv"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "FCS_dtz"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_tv"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "FCS_dist"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_tv"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "FCS_long"
+	  SrcPort		  3
+	  Points		  [110, 0; 0, -200]
+	  DstBlock		  "FCS_ae_tv"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FCS_lat"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, -125]
+	  DstBlock		  "fcs_p"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  9
+	  DstBlock		  "Mux1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  8
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  7
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_tv"
+	  SrcPort		  6
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "dis_out"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [363, 40]
+	  BackgroundColor	  "green"
+	  Text			  "ADMIRE - Control system"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  20
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Fas_in"
+      Position		      [665, 141, 710, 159]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0fcs(3)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Fes_in"
+      Position		      [665, 43, 710, 57]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0fcs(1)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Frp_in"
+      Position		      [565, 192, 615, 208]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0fcs(4)"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto"
+      Position		      [375, 165, 430, 195]
+      BackgroundColor	      "orange"
+      NamePlacement	      "alternate"
+      GotoTag		      "Altitude"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Goto
+      Name		      "Goto1"
+      Position		      [375, 195, 430, 225]
+      BackgroundColor	      "orange"
+      GotoTag		      "Mach"
+      TagVisibility	      "global"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Mach"
+      Position		      [265, 195, 350, 225]
+      BackgroundColor	      "gray"
+      Value		      "Mach+dMach_err"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [28, 1, 0, 0, 0]
+      Position		      [140, 21, 145, 579]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontSize		      12
+      FontAngle		      "italic"
+      Inputs		      "28"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [4, 1, 0, 0, 0]
+      Position		      [405, 352, 410, 478]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontSize		      12
+      FontAngle		      "italic"
+      Inputs		      "4"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum10"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [740, 340, 760, 360]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum11"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [640, 390, 660, 410]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [740, 40, 760, 60]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [640, 90, 660, 110]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum4"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [740, 140, 760, 160]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum5"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [640, 190, 660, 210]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum6"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [285, 490, 305, 510]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum7"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [515, 440, 535, 460]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum8"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [740, 240, 760, 260]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum9"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [640, 290, 660, 310]
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontAngle		      "italic"
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Vt_in"
+      Position		      [570, 91, 615, 109]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "u0fcs(2)"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "disturbance_in"
+      Position		      [435, 443, 485, 457]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "[0 0 0 0]"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dle_in"
+      Position		      [665, 243, 715, 257]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dty_in"
+      Position		      [665, 343, 715, 357]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dtz_in"
+      Position		      [565, 393, 615, 407]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "ldg_in"
+      Position		      [565, 293, 615, 307]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "y0_in"
+      Position		      [160, 493, 255, 507]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "y0bare(44+[1:28])"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Vt_out"
+      Position		      [875, 45, 895, 65]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "alpha_out"
+      Position		      [875, 100, 895, 120]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "2"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "beta_out"
+      Position		      [875, 155, 895, 175]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "3"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "pb_out"
+      Position		      [875, 210, 895, 230]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "4"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "qb_out"
+      Position		      [875, 265, 895, 285]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "5"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "rb_out"
+      Position		      [875, 320, 895, 340]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "6"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "psi_out"
+      Position		      [875, 375, 895, 395]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "7"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "theta_out"
+      Position		      [875, 430, 895, 450]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "8"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "phi_out"
+      Position		      [875, 485, 895, 505]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "9"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Line {
+      SrcBlock		      "y0_in"
+      SrcPort		      1
+      DstBlock		      "Sum6"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [145, 0]
+      DstBlock		      "Sum6"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "y0_dist_1"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "y0_dist_2"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "y0_dist_3"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "y0_dist_4"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "y0_dist_5"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "y0_dist_6"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "y0_dist_7"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "y0_dist_8"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "y0_dist_9"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "y0_dist_10"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "y0_dist_11"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      11
+    }
+    Line {
+      SrcBlock		      "y0_dist_12"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      12
+    }
+    Line {
+      SrcBlock		      "y0_dist_13"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      13
+    }
+    Line {
+      SrcBlock		      "y0_dist_14"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      14
+    }
+    Line {
+      SrcBlock		      "y0_dist_15"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      15
+    }
+    Line {
+      SrcBlock		      "y0_dist_16"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      16
+    }
+    Line {
+      SrcBlock		      "y0_dist_17"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      17
+    }
+    Line {
+      SrcBlock		      "y0_dist_18"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      18
+    }
+    Line {
+      SrcBlock		      "y0_dist_19"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      19
+    }
+    Line {
+      SrcBlock		      "y0_dist_20"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      20
+    }
+    Line {
+      SrcBlock		      "y0_dist_21"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      21
+    }
+    Line {
+      SrcBlock		      "y0_dist_22"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      22
+    }
+    Line {
+      SrcBlock		      "y0_dist_23"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      23
+    }
+    Line {
+      SrcBlock		      "y0_dist_24"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      24
+    }
+    Line {
+      SrcBlock		      "y0_dist_25"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      25
+    }
+    Line {
+      SrcBlock		      "y0_dist_26"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      26
+    }
+    Line {
+      SrcBlock		      "y0_dist_27"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      27
+    }
+    Line {
+      SrcBlock		      "y0_dist_28"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      28
+    }
+    Line {
+      SrcBlock		      "Fas_in"
+      SrcPort		      1
+      DstBlock		      "Sum4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Fas_dist"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum6"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Sum4"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dty_in"
+      SrcPort		      1
+      DstBlock		      "Sum10"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "dty_dist"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum10"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum10"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "Sum9"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Sum8"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Mach"
+      SrcPort		      1
+      DstBlock		      "Goto1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Alt"
+      SrcPort		      1
+      DstBlock		      "Goto"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [110, 0]
+      DstBlock		      "Sum7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "disturbance_in"
+      SrcPort		      1
+      DstBlock		      "Sum7"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum7"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "u_dist"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "v_dist"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "w_dist"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "p_dist"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "dtz_in"
+      SrcPort		      1
+      DstBlock		      "Sum11"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "dtz_dist"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum11"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum11"
+      SrcPort		      1
+      DstBlock		      "Control\nsystem1"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "ldg_in"
+      SrcPort		      1
+      DstBlock		      "Sum9"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "ldg_dist"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dle_in"
+      SrcPort		      1
+      DstBlock		      "Sum8"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "dle_dist"
+      SrcPort		      1
+      Points		      [45, 0]
+      DstBlock		      "Sum8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Frp_in"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Frp_dist"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Vt_in"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Vt_dist"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Fes_in"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Fes_dist"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      1
+      DstBlock		      "Vt_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      2
+      DstBlock		      "alpha_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      3
+      DstBlock		      "beta_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      4
+      DstBlock		      "pb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      5
+      DstBlock		      "qb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      6
+      DstBlock		      "rb_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      7
+      DstBlock		      "psi_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      8
+      DstBlock		      "theta_out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Control\nsystem1"
+      SrcPort		      9
+      DstBlock		      "phi_out"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [357, 60]
+      BackgroundColor	      "green"
+      Text		      "admire_fcs_lin 3.4f\nModel used for linearisati"
+"on of ADMIRE FCS 3.4f\nDesigned by Torbjorn Noren, Gunnar Hovmark & Åke Hydén"
+"\nFOI , Sweden , April 18th, 2001\nLinearisation of the control system exclud"
+"ing the\ncontrol selector."
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      14
+      FontWeight	      "bold"
+      FontAngle		      "italic"
+    }
+  }
+}

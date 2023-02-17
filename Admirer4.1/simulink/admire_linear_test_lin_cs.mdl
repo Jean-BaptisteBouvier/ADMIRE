@@ -1,0 +1,4099 @@
+Model {
+  Name			  "admire_linear_test_lin_cs"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  on
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "30"
+  SolverMode		  "Auto"
+  Solver		  "ode4"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "0.008"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout_lin"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout_lin"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Wed Jul 05 09:18:37 2000"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "hkg"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Dec 18 22:36:18 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:76>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "admire_linear_test_lin_cs"
+    Location		    [-108, 143, 916, 809]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "yellow"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "ADMIRE_bare_Linear"
+      Ports		      [16, 1, 0, 0, 0]
+      Position		      [725, 37, 790, 533]
+      ShowPortLabels	      on
+      System {
+	Name			"ADMIRE_bare_Linear"
+	Location		[290, 74, 746, 691]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "drc"
+	  Position		  [85, 38, 115, 52]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dlc"
+	  Position		  [85, 68, 115, 82]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "droe"
+	  Position		  [85, 98, 115, 112]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "drie"
+	  Position		  [85, 128, 115, 142]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dlie"
+	  Position		  [85, 158, 115, 172]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dloe"
+	  Position		  [85, 188, 115, 202]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dr"
+	  Position		  [85, 218, 115, 232]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dle"
+	  Position		  [85, 248, 115, 262]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "8"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ldg"
+	  Position		  [85, 278, 115, 292]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "9"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "tss"
+	  Position		  [85, 308, 115, 322]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "10"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dty"
+	  Position		  [85, 338, 115, 352]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "11"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dtz"
+	  Position		  [85, 368, 115, 382]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "12"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "u_dist"
+	  Position		  [85, 398, 115, 412]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "13"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "v_dist"
+	  Position		  [85, 428, 115, 442]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "14"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "w_dist"
+	  Position		  [85, 458, 115, 472]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "15"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "p_dist"
+	  Position		  [85, 488, 115, 502]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "16"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [16, 1, 0, 0, 0]
+	  Position		  [145, 36, 150, 504]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Inputs		  "16"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  StateSpace
+	  Name			  "State-Space"
+	  Position		  [220, 236, 300, 304]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	  A			  "Abare"
+	  B			  "Bbare"
+	  C			  "Cbare"
+	  D			  "Dbare"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "y0_lin"
+	  Position		  [385, 260, 405, 280]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "w_dist"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  15
+	}
+	Line {
+	  SrcBlock		  "p_dist"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  16
+	}
+	Line {
+	  SrcBlock		  "drc"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dlc"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "droe"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "drie"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "dlie"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "dloe"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "dr"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "dle"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "ldg"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "tss"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "dty"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  11
+	}
+	Line {
+	  SrcBlock		  "dtz"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  12
+	}
+	Line {
+	  SrcBlock		  "u_dist"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  13
+	}
+	Line {
+	  SrcBlock		  "v_dist"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  14
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "State-Space"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "State-Space"
+	  SrcPort		  1
+	  DstBlock		  "y0_lin"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      Ports		      [10, 16, 0, 0, 0]
+      Position		      [250, 40, 335, 530]
+      ShowPortLabels	      on
+      System {
+	Name			"ADMIRE_fcs_Linear \nincluding \ncontrol selec"
+"tor"
+	Location		[119, 74, 860, 646]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "dFes"
+	  Position		  [70, 60, 90, 80]
+	  BackgroundColor	  "green"
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dVt"
+	  Position		  [70, 100, 90, 120]
+	  BackgroundColor	  "green"
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dFas"
+	  Position		  [70, 140, 90, 160]
+	  BackgroundColor	  "green"
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dFrp"
+	  Position		  [70, 180, 90, 200]
+	  BackgroundColor	  "green"
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dle_in"
+	  Position		  [70, 220, 90, 240]
+	  BackgroundColor	  "green"
+	  Port			  "5"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ldg_in"
+	  Position		  [70, 260, 90, 280]
+	  BackgroundColor	  "green"
+	  Port			  "6"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dty_in"
+	  Position		  [70, 300, 90, 320]
+	  BackgroundColor	  "green"
+	  Port			  "7"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "dtz_in"
+	  Position		  [70, 340, 90, 360]
+	  BackgroundColor	  "green"
+	  Port			  "8"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Disturbance"
+	  Position		  [70, 380, 90, 400]
+	  BackgroundColor	  "green"
+	  Port			  "9"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Feedback"
+	  Position		  [70, 420, 90, 440]
+	  BackgroundColor	  "green"
+	  Port			  "10"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 16, 0, 0, 0]
+	  Position		  [545, 39, 555, 456]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "16"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "FCS_Fas_in"
+	  Position		  [195, 115, 285, 135]
+	  BackgroundColor	  "orange"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_Fas_in"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "FCS_Fes_in"
+	  Position		  [195, 25, 285, 45]
+	  BackgroundColor	  "orange"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_Fes_in"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "FCS_Frp_in"
+	  Position		  [195, 155, 285, 175]
+	  BackgroundColor	  "orange"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_Frp_in"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "FCS_Vt_in"
+	  Position		  [195, 75, 285, 95]
+	  BackgroundColor	  "orange"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_Vt_in"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [10, 1, 0, 0, 0]
+	  Position		  [310, 39, 320, 461]
+	  ShowName		  off
+	  Inputs		  "10"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  StateSpace
+	  Name			  "State-Space"
+	  Position		  [370, 216, 450, 284]
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	  A			  "Afcs_cs"
+	  B			  "Bfcs_cs"
+	  C			  "Cfcs_cs"
+	  D			  "Dfcs_cs"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  Position		  [460, 150, 520, 180]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  VariableName		  "uout_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "drc"
+	  Position		  [660, 53, 690, 67]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dlc"
+	  Position		  [620, 78, 650, 92]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "droe"
+	  Position		  [660, 103, 690, 117]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "drie"
+	  Position		  [620, 128, 650, 142]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dlie"
+	  Position		  [660, 153, 690, 167]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dloe"
+	  Position		  [620, 178, 650, 192]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dr"
+	  Position		  [660, 203, 690, 217]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dle"
+	  Position		  [625, 228, 655, 242]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "8"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "tss"
+	  Position		  [670, 253, 700, 267]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "9"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ldg"
+	  Position		  [625, 278, 655, 292]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "10"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dty"
+	  Position		  [665, 303, 695, 317]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "11"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dtz"
+	  Position		  [625, 328, 655, 342]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "12"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u_dist"
+	  Position		  [665, 353, 695, 367]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "13"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v_dist"
+	  Position		  [625, 378, 655, 392]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "14"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "w_dist"
+	  Position		  [670, 403, 700, 417]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "15"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p_dist"
+	  Position		  [625, 428, 655, 442]
+	  BackgroundColor	  "orange"
+	  FontAngle		  "italic"
+	  Port			  "16"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "State-Space"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "dle_in"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "ldg_in"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "dty_in"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "dtz_in"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Disturbance"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "Feedback"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "drc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "dlc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  7
+	  DstBlock		  "dr"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  8
+	  DstBlock		  "dle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  10
+	  DstBlock		  "ldg"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  11
+	  DstBlock		  "dty"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  12
+	  DstBlock		  "dtz"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  13
+	  DstBlock		  "u_dist"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  14
+	  DstBlock		  "v_dist"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  15
+	  DstBlock		  "w_dist"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  16
+	  DstBlock		  "p_dist"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "droe"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  DstBlock		  "drie"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  DstBlock		  "dlie"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  DstBlock		  "dloe"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  9
+	  DstBlock		  "tss"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "State-Space"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "Demux"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "dFes"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -35]
+	    DstBlock		    "FCS_Fes_in"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "dVt"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "FCS_Vt_in"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "dFrp"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "FCS_Frp_in"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "dFas"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, -25]
+	    DstBlock		    "FCS_Fas_in"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "DisturbParam\n(Sub block)"
+      Ports		      [0, 1, 0, 0, 0]
+      Position		      [185, 451, 225, 469]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      ShowPortLabels	      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "port"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"DisturbParam\n(Sub block)"
+	Location		[643, 416, 942, 621]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [205, 36, 220, 169]
+	  BackgroundColor	  "black"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Inputs		  "4"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "p_dist "
+	  Position		  [30, 145, 70, 165]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "u_dist "
+	  Position		  [100, 40, 140, 60]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "v_dist "
+	  Position		  [30, 75, 70, 95]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "w_dist "
+	  Position		  [100, 110, 140, 130]
+	  BackgroundColor	  "gray"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dist"
+	  Position		  [250, 97, 280, 113]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "p_dist "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "w_dist "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "v_dist "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "u_dist "
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "dist"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [27, 17]
+	  BackgroundColor	  "green"
+	  Text			  "Level II"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FCS_ae_rl"
+      Ports		      [9, 9, 0, 0, 0]
+      Position		      [575, 46, 670, 314]
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      FontAngle		      "italic"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Saturators,\\nRatelimiters\\nand\\nActuat"
+"ors\\n\\nMach No and\\nrate limiter\\ndata are\\ntaken from\\nWorkspace\\n\\n"
+"All inital\\nstates empty')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FCS_ae_rl"
+	Location		[217, 80, 872, 683]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_drc"
+	  Position		  [60, 88, 90, 102]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "u_dlc_"
+	  Position		  [60, 138, 90, 152]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  ShowName		  off
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_droe"
+	  Position		  [60, 188, 90, 202]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "u_drie_"
+	  Position		  [60, 238, 90, 252]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  ShowName		  off
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_dlie"
+	  Position		  [60, 288, 90, 302]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_dloe"
+	  Position		  [60, 338, 90, 352]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_dr"
+	  Position		  [60, 388, 90, 402]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_dle"
+	  Position		  [60, 438, 90, 452]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontAngle		  "italic"
+	  Port			  "8"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_tss"
+	  Position		  [60, 488, 90, 502]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontAngle		  "italic"
+	  Port			  "9"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Engine Dynamics\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [335, 525, 395, 555]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[1]"
+	  D			  "[2  1]"
+	  X0			  "[0]"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_lc"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 139, 435, 171]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: lc"
+"')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_lc"
+	    Location		    [186, 175, 926, 544]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_lc_dlc"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_c+ddc_rate"
+	      FallingSlewLimit	      "-rlimit_c-ddc_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "dlc_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddc_bw  1]"
+	      X0		      "[]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dlc_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dlc_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dlc_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dlc_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_lc_dlc_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_lc_dlc"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dlc_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "dlc_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_lc_dlc_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dlc_r"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"dlc_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_le"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 469, 435, 501]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: le"
+"')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_le"
+	    Location		    [190, 171, 930, 540]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_le_dle"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_le+ddle_rate"
+	      FallingSlewLimit	      "-rlimit_le-ddle_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "dle_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddle_bw  1]"
+	      X0		      "[0]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dle_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dle_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dle_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dle_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_le_dle_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_le_dle"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dle_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "dle_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_le_dle_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dle_r"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"dle_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_lie"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 304, 435, 336]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: li"
+"e')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_lie"
+	    Location		    [192, 169, 932, 538]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_lie_dlie"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_ie+ddei_rate"
+	      FallingSlewLimit	      "-rlimit_ie-ddei_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "dlie_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddei_bw  1]"
+	      X0		      "[0]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dlie_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dlie_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dlie_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dlie_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_lie_dlie_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "dlie_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_lie_dlie_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_lie_dlie"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dlie_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		DstBlock		"dlie_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dlie_r"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_loe"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 359, 435, 391]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: lo"
+"e')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_loe"
+	    Location		    [192, 169, 932, 538]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_loe_dloe"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_oe+ddey_rate"
+	      FallingSlewLimit	      "-rlimit_oe-ddey_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "dloe_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddey_bw  1]"
+	      X0		      "[0]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dloe_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dloe_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dloe_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dloe_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_loe_dloe_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_loe_dloe"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dloe_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "dloe_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_loe_dloe_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dloe_r"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"dloe_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_r"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 414, 435, 446]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: r'"
+")"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_r"
+	    Location		    [190, 171, 930, 540]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_r_dr"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_r+ddr_rate"
+	      FallingSlewLimit	      "-rlimit_r-ddr_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "dr_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddr_bw  1]"
+	      X0		      "[0]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dr_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dr_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "dr_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "dr_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_r_dr_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "dr_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_r_dr_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_r_dr"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dr_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		DstBlock		"dr_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"dr_r"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_rc"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 84, 435, 116]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: rc"
+"')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_rc"
+	    Location		    [220, 141, 960, 510]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_rc_drc"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_c+ddc_rate"
+	      FallingSlewLimit	      "-rlimit_c-ddc_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "drc_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddc_bw  1]"
+	      X0		      "[]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "drc_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "drc_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "drc_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "drc_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_rc_drc_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "drc_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_rc_drc_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_rc_drc"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"drc_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		DstBlock		"drc_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"drc_r"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_rie"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 249, 435, 281]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: ri"
+"e')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_rie"
+	    Location		    [204, 157, 944, 526]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_rie_drie"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_ie+ddei_rate"
+	      FallingSlewLimit	      "-rlimit_ie-ddei_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "drie_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddei_bw  1]"
+	      X0		      "[]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "drie_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "drie_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "drie_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "drie_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_rie_drie_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_rie_drie"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"drie_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "drie_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_rie_drie_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"drie_r"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"drie_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FCS_ae_rl_roe"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [290, 194, 435, 226]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  ShowPortLabels	  on
+	  MaskDisplay		  "disp(' Ratelimiter and Dynamics\\nServo: ro"
+"e')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "FCS_ae_rl_roe"
+	    Location		    [200, 161, 940, 530]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "yellow"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FCS_ae_rl_roe_droe"
+	      Position		      [50, 173, 80, 187]
+	      BackgroundColor	      "gray"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      RateLimiter
+	      Name		      "RL2"
+	      Position		      [265, 165, 295, 195]
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      RisingSlewLimit	      "rlimit_oe+ddey_rate"
+	      FallingSlewLimit	      "-rlimit_oe-ddey_rate"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "droe_actuator\n(with initial state)"
+	      Ports		      [1, 1, 0, 0, 0]
+	      Position		      [515, 162, 575, 198]
+	      FontName		      "Arial"
+	      FontAngle		      "italic"
+	      SourceBlock	      "simulink_extras/Additional\nLinear/Tran"
+"sfer Fcn\n(with initial states)"
+	      SourceType	      "Transfer Function with Initial States"
+	      N			      "[1]"
+	      D			      "[0.05+ddey_bw  1]"
+	      X0		      "[]"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "droe_l"
+	      Position		      [125, 147, 175, 163]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "droe_l"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      ToWorkspace
+	      Name		      "droe_r"
+	      Position		      [435, 145, 485, 165]
+	      BackgroundColor	      "orange"
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      VariableName	      "droe_r"
+	      Buffer		      "10000"
+	      Decimation	      "1"
+	      SampleTime	      "0"
+	      SaveFormat	      "Matrix"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FCS_ae_rl_roe_droe_out"
+	      Position		      [650, 173, 680, 187]
+	      BackgroundColor	      "orange"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "droe_actuator\n(with initial state)"
+	      SrcPort		      1
+	      DstBlock		      "FCS_ae_rl_roe_droe_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "FCS_ae_rl_roe_droe"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"droe_l"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"RL2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "RL2"
+	      SrcPort		      1
+	      Points		      [115, 0]
+	      Branch {
+		DstBlock		"droe_actuator\n(with initial state)"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"droe_r"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [47, 25]
+	      BackgroundColor	      "green"
+	      Text		      "Level V"
+	      DropShadow	      on
+	      FontName		      "Arial"
+	      FontSize		      12
+	      FontAngle		      "italic"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "In1"
+	  Position		  [55, 535, 95, 555]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Value			  "Mach"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function\nact_pos_lim"
+	  Ports			  [10, 9, 0, 0, 0]
+	  Position		  [140, 80, 260, 560]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  FunctionName		  "act_pos_lim"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskDisplay		  "plot([-30 30],[-30 30])\nplot([0 0],[-30 30"
+"])\nplot([-50 50],[0 0])\nplot([30 50],[30 30])\nplot([-50 -30],[-30 -30])\np"
+"lot([-5 0],[25 30])\nplot([5 0],[25 30])\nplot([45 50],[3 0])\nplot([45 50],["
+"-3 0])\ntext(-21,26,'out')\ntext(30,-2,'in')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  Position		  [470, 76, 535, 94]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_drc_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace1"
+	  Position		  [470, 131, 535, 149]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_dlc_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace12"
+	  Position		  [470, 516, 535, 534]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_tss_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace2"
+	  Position		  [470, 187, 535, 203]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_droe_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace3"
+	  Position		  [470, 241, 535, 259]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_drie_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace4"
+	  Position		  [470, 296, 535, 314]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_dlie_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace5"
+	  Position		  [470, 351, 535, 369]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_dloe_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace6"
+	  Position		  [470, 405, 530, 425]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_dr_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace7"
+	  Position		  [470, 461, 535, 479]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  VariableName		  "FCS_dle_lin"
+	  Buffer		  "inf"
+	  Decimation		  "1"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Matrix"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_drc_out"
+	  Position		  [555, 93, 585, 107]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_dlc_out"
+	  Position		  [555, 148, 585, 162]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_droe_out"
+	  Position		  [555, 203, 585, 217]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_drie_out"
+	  Position		  [555, 258, 585, 272]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_dlie_out"
+	  Position		  [555, 313, 585, 327]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_dloe_out"
+	  Position		  [555, 368, 585, 382]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_dr_out"
+	  Position		  [555, 423, 585, 437]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_dle_out"
+	  Position		  [555, 478, 585, 492]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "8"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_tss_out"
+	  Position		  [555, 533, 585, 547]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  Port			  "9"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  2
+	  DstBlock		  "FCS_ae_rl_lc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  3
+	  DstBlock		  "FCS_ae_rl_roe"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  5
+	  DstBlock		  "FCS_ae_rl_lie"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  6
+	  DstBlock		  "FCS_ae_rl_loe"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  7
+	  DstBlock		  "FCS_ae_rl_r"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  8
+	  DstBlock		  "FCS_ae_rl_le"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  9
+	  DstBlock		  "Engine Dynamics\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_rc"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function\nact_pos_lim"
+	  SrcPort		  4
+	  DstBlock		  "FCS_ae_rl_rie"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "u_dlc_"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_drc"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_droe"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_dlie"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_dloe"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_dr"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "u_drie_"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_dle"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_tss"
+	  SrcPort		  1
+	  DstBlock		  "S-Function\nact_pos_lim"
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_rc"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_drc_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_lc"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_dlc_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Engine Dynamics\n(with initial state)"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace12"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_tss_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_le"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_dle_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_r"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_dr_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_loe"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_dloe_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_lie"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_dlie_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_roe"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_droe_out"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_rie"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "To Workspace3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "FCS_ae_rl_drie_out"
+	    DstPort		    1
+	  }
+	}
+	Annotation {
+	  Position		  [506, 35]
+	  Text			  "Note: rate limits should be given \nin rad/"
+"s !"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [77, 169]
+	  BackgroundColor	  "yellow"
+	  Text			  "FCS_ae_rl_dlc"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [75, 270]
+	  BackgroundColor	  "yellow"
+	  Text			  "FCS_ae_rl_drie"
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Position		  [208, 35]
+	  BackgroundColor	  "green"
+	  Text			  "ADMIRE - Actuators & Ratelimiters"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  20
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "FCS_ae_rl_del"
+      Ports		      [7, 7, 0, 0, 0]
+      Position		      [425, 46, 505, 254]
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      FontAngle		      "italic"
+      ShowPortLabels	      on
+      MaskDisplay	      "disp('Total\\nComputer\\nDelay\\n\\nAll inital"
+"\\nstates empty')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"FCS_ae_rl_del"
+	Location		[304, 96, 814, 631]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"yellow"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_del_drc"
+	  Position		  [50, 68, 80, 82]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_del_dlc"
+	  Position		  [50, 133, 80, 147]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_del_droe"
+	  Position		  [50, 198, 80, 212]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_del_drie"
+	  Position		  [50, 263, 80, 277]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_del_dlie"
+	  Position		  [50, 328, 80, 342]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_del_dloe"
+	  Position		  [50, 393, 80, 407]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS_ae_rl_del_dr"
+	  Position		  [50, 463, 80, 477]
+	  BackgroundColor	  "gray"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "20 ms delay (dlc)\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [170, 123, 290, 157]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.000033 -0.01 1]"
+	  D			  "[0.000033 0.01 1]"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "20 ms delay (dlie)\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [170, 318, 290, 352]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.000033 -0.01 1]"
+	  D			  "[0.000033 0.01 1]"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "20 ms delay (dloe)\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [170, 383, 290, 417]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.000033 -0.01 1]"
+	  D			  "[0.000033 0.01 1]"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "20 ms delay (dr)\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [170, 453, 290, 487]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.000033 -0.01 1]"
+	  D			  "[0.000033 0.01 1]"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "20 ms delay (drc)\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [170, 58, 290, 92]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.000033 -0.01 1]"
+	  D			  "[0.000033 0.01 1]"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "20 ms delay (drie)\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [170, 253, 290, 287]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.000033 -0.01 1]"
+	  D			  "[0.000033 0.01 1]"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "20 ms delay (droe)\n(with initial state)"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [170, 188, 290, 222]
+	  FontName		  "Arial"
+	  FontAngle		  "italic"
+	  SourceBlock		  "simulink_extras/Additional\nLinear/Transfer"
+" Fcn\n(with initial states)"
+	  SourceType		  "Transfer Function with Initial States"
+	  N			  "[0.000033 -0.01 1]"
+	  D			  "[0.000033 0.01 1]"
+	  X0			  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_del_drc_delayed"
+	  Position		  [385, 68, 415, 82]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_del_dlc_delayed"
+	  Position		  [385, 133, 415, 147]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_del_droe_delayed"
+	  Position		  [385, 198, 415, 212]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_del_drie_delayed"
+	  Position		  [385, 263, 415, 277]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_del_dlie_delayed"
+	  Position		  [385, 328, 415, 342]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "5"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_del_dloe_delayed"
+	  Position		  [385, 393, 415, 407]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "6"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "FCS_ae_rl_del_dr_delayed"
+	  Position		  [385, 463, 415, 477]
+	  BackgroundColor	  "orange"
+	  DropShadow		  on
+	  FontSize		  12
+	  FontAngle		  "italic"
+	  Port			  "7"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_del_drc"
+	  SrcPort		  1
+	  DstBlock		  "20 ms delay (drc)\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_del_dlc"
+	  SrcPort		  1
+	  DstBlock		  "20 ms delay (dlc)\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_del_droe"
+	  SrcPort		  1
+	  DstBlock		  "20 ms delay (droe)\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_del_drie"
+	  SrcPort		  1
+	  DstBlock		  "20 ms delay (drie)\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_del_dlie"
+	  SrcPort		  1
+	  DstBlock		  "20 ms delay (dlie)\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_del_dloe"
+	  SrcPort		  1
+	  DstBlock		  "20 ms delay (dloe)\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS_ae_rl_del_dr"
+	  SrcPort		  1
+	  DstBlock		  "20 ms delay (dr)\n(with initial state)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "20 ms delay (drc)\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_del_drc_delayed"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "20 ms delay (dlc)\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_del_dlc_delayed"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "20 ms delay (droe)\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_del_droe_delayed"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "20 ms delay (drie)\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_del_drie_delayed"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "20 ms delay (dlie)\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_del_dlie_delayed"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "20 ms delay (dloe)\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_del_dloe_delayed"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "20 ms delay (dr)\n(with initial state)"
+	  SrcPort		  1
+	  DstBlock		  "FCS_ae_rl_del_dr_delayed"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [258, 25]
+	  BackgroundColor	  "green"
+	  Text			  "ADMIRE - Computer delay"
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  FontSize		  20
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace"
+      Position		      [105, 48, 200, 72]
+      VariableName	      "[rt_time,rt_Fes/4]"
+      SampleTime	      "0"
+      Interpolate	      on
+      HoldFinalValue	      off
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace1"
+      Position		      [100, 149, 200, 171]
+      VariableName	      "[rt_time,rt_Fas/4]"
+      SampleTime	      "0"
+      Interpolate	      on
+      HoldFinalValue	      off
+    }
+    Block {
+      BlockType		      Memory
+      Name		      "Memory"
+      Position		      [540, 560, 570, 590]
+      Orientation	      "left"
+      X0		      "0"
+      InheritSampleTime	      off
+    }
+    Block {
+      BlockType		      Selector
+      Name		      "Select 1 to 31"
+      Position		      [860, 266, 910, 304]
+      Elements		      "[1:31]"
+      InputPortWidth	      "59"
+    }
+    Block {
+      BlockType		      Selector
+      Name		      "Select 32 to 59"
+      Position		      [805, 355, 855, 395]
+      Orientation	      "down"
+      Elements		      "[32:59]"
+      InputPortWidth	      "59"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [960, 275, 980, 295]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dFrp"
+      Position		      [180, 200, 220, 220]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dVt"
+      Position		      [180, 100, 220, 120]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dle"
+      Position		      [180, 250, 220, 270]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dty"
+      Position		      [180, 350, 220, 370]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "dtz"
+      Position		      [180, 400, 220, 420]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "ldg"
+      Position		      [180, 300, 220, 320]
+      BackgroundColor	      "gray"
+      FontName		      "Arial"
+      FontAngle		      "italic"
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "y0"
+      Position		      [885, 415, 965, 435]
+      BackgroundColor	      "gray"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Value		      "y0bare(1:31)"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "wv_out2"
+      Position		      [1000, 275, 1020, 295]
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      ShowName		      off
+      FontName		      "Arial"
+      FontSize		      12
+      FontAngle		      "italic"
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      16
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      16
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      12
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      12
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      11
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      11
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl_del"
+      SrcPort		      1
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl_del"
+      SrcPort		      2
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl_del"
+      SrcPort		      3
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl_del"
+      SrcPort		      4
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl_del"
+      SrcPort		      5
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl_del"
+      SrcPort		      6
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl_del"
+      SrcPort		      7
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      8
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      9
+      DstBlock		      "FCS_ae_rl"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      10
+      Points		      [365, 0; 0, -30]
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      9
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      13
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      13
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      14
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      14
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      15
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      15
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      2
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      3
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      4
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      5
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      6
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      7
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      8
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "FCS_ae_rl"
+      SrcPort		      9
+      Points		      [5, 0; 0, 20; 30, 0]
+      DstBlock		      "ADMIRE_bare_Linear"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "ADMIRE_bare_Linear"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	DstBlock		"Select 1 to 31"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Select 32 to 59"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Select 32 to 59"
+      SrcPort		      1
+      Points		      [0, 175]
+      DstBlock		      "Memory"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "wv_out2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "y0"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Select 1 to 31"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Memory"
+      SrcPort		      1
+      Points		      [-305, 0; 0, -65]
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      10
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      1
+      DstBlock		      "FCS_ae_rl_del"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      2
+      DstBlock		      "FCS_ae_rl_del"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      3
+      DstBlock		      "FCS_ae_rl_del"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      4
+      DstBlock		      "FCS_ae_rl_del"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      5
+      DstBlock		      "FCS_ae_rl_del"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      6
+      DstBlock		      "FCS_ae_rl_del"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      SrcPort		      7
+      DstBlock		      "FCS_ae_rl_del"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "From\nWorkspace"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "dVt"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "From\nWorkspace1"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "dFrp"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "dle"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "ldg"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "dty"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      7
+    }
+    Line {
+      SrcBlock		      "dtz"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      8
+    }
+    Line {
+      SrcBlock		      "DisturbParam\n(Sub block)"
+      SrcPort		      1
+      DstBlock		      "ADMIRE_fcs_Linear \nincluding \ncontrol selecto"
+"r"
+      DstPort		      9
+    }
+    Annotation {
+      Position		      [943, 120]
+      BackgroundColor	      "green"
+      Text		      "Admire_linear_test_lin_cs 3.4h \n(mainly linear"
+", control selector included\nin linear control system) \nby  L. Forssell, \nÅ"
+". Hydén, \nF. Johansson, \nT. Norén, \nG. Hovmark. \nFOI, Sweden, \nDecember "
+"18, 2002"
+      DropShadow	      on
+      FontName		      "Arial"
+      FontSize		      16
+      FontWeight	      "bold"
+      FontAngle		      "italic"
+    }
+    Annotation {
+      Position		      [705, 605]
+      Text		      "NOTE: If you want to linearise this Simulink mo"
+"del \nwith linmod, you must first\nremove the memory block."
+    }
+  }
+}
