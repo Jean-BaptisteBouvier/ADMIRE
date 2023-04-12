@@ -1,6 +1,16 @@
 # ADMIRE
 
-This project contains the MATLAB codes for the ADMIRE fighter jet model. This model has been created by Lars Forssell and Ulrik Nilsson from the Swedish Defence Research Agency. Their [report](https://www.foi.se/rest-api/report/FOI-R--1624--SE) describes the development of this research project. Their MATLAB codes used to be accessible, but were removed from their original website before 2020. We make these codes available again here.
+This project contains the MATLAB codes for the ADMIRE fighter jet model pictured below. 
+
+<p align="center">
+  <img src="admire_colors.PNG" alt="ADMIRE with colored actuators">   
+</p>
+<p align="center">
+  ADMIRE jet model with colored actuators, image modified from <a href="https://doi.org/10.1016/j.automatica.2023.110985">this paper</a>.
+</p>
+
+
+This model has been created by Lars Forssell and Ulrik Nilsson from the Swedish Defence Research Agency. Their [report](https://www.foi.se/rest-api/report/FOI-R--1624--SE) describes the development of this research project. Their MATLAB codes used to be accessible, but were removed from their original website before 2020. We make these codes available again here.
 
 
 **File Structure**
